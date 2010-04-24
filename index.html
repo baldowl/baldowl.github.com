@@ -4,7 +4,7 @@ title: Baldowl - my nest somewhere in GitHub's forest
 ---
 {% for post in site.posts %}
 <div class="post">
-  <h1>{{ post.title }}</h1>
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 
   {% if post.user %}<p>Posted by <a>{{ post.user }}</a></p>{% endif %}
 
