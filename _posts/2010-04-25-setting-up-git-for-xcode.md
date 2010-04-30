@@ -2,6 +2,7 @@
 layout: post
 title: Setting up Git for Xcode
 ---
+[<img src="images/dscpq.jpg" class="float-right" />](http://www.pragprog.com/titles/dscpq/cocoa-programming)
 Even if I don't particularly like Objective-C, given the recent release of [Cocoa Programming](http://www.pragprog.com/titles/dscpq/cocoa-programming) I've started to play a bit with Xcode; after the big upgrade to **Xcode 3.2.2** and a huge backup I created a new project and put together a really nasty interface, crammed with controls, just to "taste" Interface Builder.
 
 But that's not the point of this story.
