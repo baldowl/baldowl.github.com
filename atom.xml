@@ -1,10 +1,10 @@
 ---
-layout: nil
 base: http://baldowl.github.com
+id_base: tag:baldowl.github.com,2005
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
-  <id>tag:{{ page.base }},2005:atom</id>
+  <id>{{ page.id_base }}:atom</id>
   <link rel="alternate" href="{{ page.base }}" type="text/html" />
   <link rel="self" href="{{ page.base }}/atom.xml" type="application/atom+xml" />
   <title>Baldowl</title>
@@ -14,13 +14,13 @@ base: http://baldowl.github.com
   </author>
   {% for post in site.posts %}
   <entry>
-    <id>tag:{{ page.base }},2005:{{ post.id }}</id>
-    <published>{{ post.date | date_to_xmlschema }}</published>
+    <id>{{ page.id_base }}:{{ post.id }}</id>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
     <link rel="alternate" href="{{ page.base }}{{ post.url }}" type="text/html" />
     <title>{{ post.title }}</title>
     <content type="html">
-      <p>{{ post.content | strip_html | truncatewords: 50 | xml_escape }}</p>
-      <p><a href="{{ page.base }}{{ post.url }}">More...</a></p>
+      &lt;p&gt;{{ post.content | strip_html | truncatewords: 50 | xml_escape }}&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;{{ page.base }}{{ post.url }}&quot;&gt;More...&lt;/a&gt;&lt;/p&gt;
     </content>
     {% if post.author %}
     <author>
