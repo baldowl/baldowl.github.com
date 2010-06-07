@@ -95,6 +95,11 @@ code {
   border-left: 3px solid #72A545;
 }
 
+code, pre, tt	{
+  font-family: Monaco, monospace;
+  font-size: 11px;
+}
+
 acronym {
   cursor: help;
   border-bottom: 1px solid #777;
