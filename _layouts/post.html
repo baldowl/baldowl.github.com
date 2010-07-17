@@ -1,6 +1,20 @@
 ---
 layout: default
 ---
+<div class="page-navigation align-right">
+  {% if page.next.url %}
+    <span class="next-page">
+      <a href="{{ page.next.url }}" title="Next Post: {{ page.next.title }}">&laquo; {{ page.next.title }}</a>
+    </span>
+  {% endif %}
+  {% if page.previous.url and page.next.url %}<span class="page-separator"></span>{% endif %}
+  {% if page.previous.url %}
+    <span class="previous-page">
+      <a href="{{ page.previous.url }}" title="Previous Post: {{ page.previous.title }}">{{ page.previous.title }} &raquo;</a>
+    </span>
+  {% endif %}
+</div>
+
 <div class="post">
   <h1>{{ page.title }}</h1>
 
@@ -11,4 +25,18 @@ layout: default
   <p class="post-footer align-right">
     {% if page.date %}<span class="date">{{ page.date | date: '%b %d, %Y' }}</span>{% endif %}
   </p>
+</div>
+
+<div class="page-navigation align-right">
+  {% if page.next.url %}
+    <span class="next-page">
+      <a href="{{ page.next.url }}" title="Next Post: {{ page.next.title }}">&laquo; {{ page.next.title }}</a>
+    </span>
+  {% endif %}
+  {% if page.previous.url and page.next.url %}<span class="page-separator"></span>{% endif %}
+  {% if page.previous.url %}
+    <span class="previous-page">
+      <a href="{{ page.previous.url }}" title="Previous Post: {{ page.previous.title }}">{{ page.previous.title }} &raquo;</a>
+    </span>
+  {% endif %}
 </div>
