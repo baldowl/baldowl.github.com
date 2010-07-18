@@ -24,7 +24,7 @@ title: Baldowl - my nest somewhere in GitHub's forest
 <div class="post">
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 
-  {% if post.user %}<p>Posted by <a>{{ post.user }}</a></p>{% endif %}
+  {% if post.author %}<p class="gray align-right">Posted by {{ post.author }}</p>{% endif %}
 
   {{ post.content }}
 
