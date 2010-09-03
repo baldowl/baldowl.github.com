@@ -3,7 +3,7 @@ layout: post
 ---
 These days I need something to do in the evening instead of watching bad football/soccer matches (Germany played a good one...), so I started to play more seriously with RubyCocoa.
 
-While my mind was wandering around, partially distracted by noises produced by TV in the leaving room, a question arose: if an application written with RubyCocoa uses one or more libraries distributed as gems, what can I do to ensure that the application can be used on a prospective user's system without hassles?
+While my mind was wandering around, partially distracted by noises produced by TV in the living room, a question arose: if an application written with RubyCocoa uses one or more libraries distributed as gems, what can I do to ensure that the application can be used on a prospective user's system without hassles?
 
 Obviously, the libraries must be "vendored" in some way, so what I needed was a robust solution to help me storing the gems inside the application, managing the load paths correctly and possibly cutting off access to the system's libraries (more on this below). A possibility is the <tt>standaloneify.rb</tt> script, buried inside the RubyCocoa's directory, but I got an error trying to use it to "bundle" **ActiveSupport**...
 
