@@ -8,7 +8,7 @@ Anyway, I was playing with [Heroku](http://heroku.com) to evaluate the feasibily
 
 ## Why bother?
 
-There are already at least a couple of solutions, namely [Rack-Jekyll](http://github.com/bry4n/rack-jekyll) and a [blog post](http://jstorimer.com/2009/12/29/jekyll-on-heroku.html) which explains how to use [Sinatra](http//www.sinatrarb.com). I see problems with both of them:
+There are already at least a couple of solutions, namely [Rack-Jekyll](http://github.com/bry4n/rack-jekyll) and a [blog post](http://jstorimer.com/2009/12/29/jekyll-on-heroku.html) which explains how to use [Sinatra](http://www.sinatrarb.com). I see problems with both of them:
 
 * **Rack-Jekyll** does not set any HTTP cache header, so every request will hit the dyno;
 
