@@ -1,0 +1,14 @@
+<h1>Archive of {{ archive_year }} posts</h1>
+
+<ul>
+{% for post in site.posts reversed %}
+  {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% if post_year == archive_year %}
+    <li>
+      <p><strong>{{ post.date | date: "%Y-%m-%d" }}:</strong>
+      <a href="{{ post.url }}">{{ post.title }}</a></p>
+      <p>{{ post.content | strip_html | truncatewords: 30 }}</p>
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
