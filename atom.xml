@@ -12,7 +12,7 @@ id_base: tag:baldowl.github.com,2005
   <author>
     <name>Emanuele Vicentini</name>
   </author>
-  {% for post in site.posts %}
+  {% for post in site.posts limit: 10 %}
   <entry>
     <id>{{ page.id_base }}:{{ post.id }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
