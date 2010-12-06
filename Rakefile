@@ -28,3 +28,19 @@ def gathered_data
   $stdout.reopen old_stdout
   @site
 end
+
+require 'net/http'
+
+desc "Ping Google after a sitemap update"
+task :ping do
+  pinging_url = "http://www.google.com/webmasters/tools/ping?sitemap=" +
+    "http%3A%2F%2Fbaldowl.github.com%2Fsitemap.xml"
+  google_response = Net::HTTP.get_response(URI.parse(pinging_url))
+  case google_response
+  when Net::HTTPOK
+    puts "Successfully pinged Google"
+  else
+    puts "Problems reported by Google: see the response's body\n\n"
+    puts google_response.body
+  end
+end
