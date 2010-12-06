@@ -3,6 +3,7 @@ require 'jekyll'
 
 task :default => :check_yearly_archives
 
+desc "Check yearly archives' consistency"
 task :check_yearly_archives do
   puts "Checking yearly archives..."
   published_years = gathered_data.posts.map {|p| p.date.year}.uniq.sort
