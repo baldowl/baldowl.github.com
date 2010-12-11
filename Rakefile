@@ -45,3 +45,24 @@ task :ping do
     puts google_response.body
   end
 end
+
+desc "Build the YEAR archive"
+task :archive, :year do |t, args|
+  if args.year
+    page = "archives/years/#{args.year}/index.html"
+    unless File.file?(page)
+      FileUtils.mkdir_p File.dirname(page)
+      File.open page, 'w' do |f|
+        f.puts "---
+layout: default
+---
+{% assign archive_year = '#{args.year}' %}
+{% include year.html %}"
+      end
+    else
+      puts "#{args.year} archive already exists; nothing to do"
+    end
+  else
+    puts 'Missing year; nothing to do'
+  end
+end
