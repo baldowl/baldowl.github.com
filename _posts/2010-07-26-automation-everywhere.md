@@ -2,7 +2,7 @@
 layout: post
 ---
 Summertime has hit too heavily for my taste and everything else beyond work is coming to a grinding halt. Some nights ago, unable to fall asleep, my mind started wandering, so I found myself thinking about **automation** and some of the things I automated over time.
-<img src="/images/gears.jpg" class="float-right" alt="Mechanical gears"/>
+<img src="/images/posts/gears.jpg" class="float-right" alt="Mechanical gears"/>
 
 Years ago, when I bought my first laptop, I set up the only network adapter, an Ethernet card, with static IP address: I was in charge of administering the only network my laptop could join, so that strict approach did not seem too cumbersome. Some years later I switched to <acronym title="Dynamic Host Configuration Protocol">DHCP</acronym> even for my old laptop and now, with Wi-Fi, Ethernet, Bluetooth and FireWire I really cannot think about going back.
 
