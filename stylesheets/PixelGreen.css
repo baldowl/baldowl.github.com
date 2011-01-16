@@ -206,6 +206,9 @@ blockquote {
 .sidebox {
   background: #F5F5F5;
   border: 1px solid #EFEDED;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
   margin-bottom: 10px;
 }
 
@@ -214,7 +217,6 @@ blockquote {
   list-style: none;
   margin: 10px 0px 15px 0px;
   padding: 0px;
-  background: #F2F2F2;
 }
 
 #sidebar ul.sidemenu li {
@@ -228,7 +230,6 @@ blockquote {
   height: 1.5em;
   padding: 0.3em 0px 0.3em 15px;
   line-height: 1.5em;
-  border-bottom: 1px dashed #D4D4D4;
   text-decoration: none;
 }
 
