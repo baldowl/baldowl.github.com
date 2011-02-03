@@ -18,3 +18,10 @@ Operations could have been chained a little bit more, but I prefer to build
 things piece by piece. I used ActiveSupport because I'm too lazy to do the
 time math by myself; the last <tt>#map</tt> is "necessary evil" for European
 buckets (at least with fog 0.4.1, available yesterday afternoon).
+
+**Update 2011-02-03**: setting the right region in the <tt>~/.fog</tt> file
+(say **eu-west-1**) has a couple of nice effects: first you avoid a
+redirection when connecting to S3 and then the signed URLs change from
+<tt>https://s3.amazonaws.com/yourbucket/...</tt> to
+<tt>https://s3-eu-west-1.amazonaws.com/yourbucket/...</tt> and this makes the
+last <tt>map {}</tt> unnecessary.
