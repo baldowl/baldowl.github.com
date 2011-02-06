@@ -193,7 +193,7 @@ blockquote {
 #sidebar {
   float: right;
   width: 28%;
-  margin: 0px 0px 10px 0px;
+  margin: 10px 0px;
   padding: 0px;
 }
 
@@ -259,15 +259,21 @@ blockquote {
 }
 
 .post {
-  margin: 0px;
-  padding: 0px;
   background: #FFF url(/images/gradientbg.jpg) repeat-x;
   border: 1px solid #EFEDED;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  margin: 10px 0px;
+  padding: 0px;
 }
 
 .post .post-footer {
   background-color: #FAFAFA;
   border: 1px solid #f2f2f2;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
   padding: 5px;
   margin-top: 20px;
   font-size: 95%;
