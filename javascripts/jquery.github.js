@@ -1,8 +1,11 @@
-jQuery.githubUser = function(username, callback) {
-  jQuery.getJSON("http://github.com/api/v2/json/repos/show/" + username + "?callback=?", callback);
+$.github = {};
+
+$.github.repos = function(username, callback) {
+  $.getJSON("http://github.com/api/v2/json/repos/show/" + username +
+    "?callback=?", callback);
 }
 
-$.githubUser('baldowl', function(data) {
+$.github.repos('baldowl', function(data) {
   var limit = 5
   var list = $('#github-repos');
   var repos = data.repositories;
