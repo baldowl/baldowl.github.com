@@ -17,7 +17,7 @@ stylesheets?
 Ruby on Rails 3.0.\* does not serve static assets (i.e., the contents of
 <tt>public</tt>) in production mode. The reasons are that your application
 server is usually fronted with a web server and this piece of software is
-better suited then anything else to quickly serve files.
+better suited than anything else to quickly serve files.
 
 But you insist: you want to see you app, in production mode, on your
 development machine, running just Thin. Ok, then change the value of
