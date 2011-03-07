@@ -52,7 +52,7 @@ following problem.
 Let's say we have a list of records, each paired with a "Delete" link. We have
 the following scenario, spiced up with the help of [Pickle](https://github.com/ianwhite/pickle):
 
-<script src="https://gist.github.com/729996.js?file=gistfile3.feature">false;</script>
+<script src="https://gist.github.com/729996.js?file=gistfile1.feature">false;</script>
 
 We run Cucumber and the scenario does not pass. Webrat uses link's **onclick**
 to decide if GET or something else must be used, but Ruby on Rails 3 does not
@@ -60,7 +60,7 @@ produce the same, old HTML code: it now embraces the unobtrusiveness way of
 life, so it **got rid of onclick attributes** and replaced them with HTML5
 **data attributes**:
 
-<script src="https://gist.github.com/729996.js?file=gistfile4.html">false;</script>
+<script src="https://gist.github.com/729996.js?file=gistfile2.html">false;</script>
 
 Until a fix emerges for this, a workaround could be something like the
 following step definition:
