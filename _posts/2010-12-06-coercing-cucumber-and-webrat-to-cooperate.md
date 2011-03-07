@@ -37,7 +37,7 @@ it's **harmless noise** in this case.
 
 **Update 2011-03-07**: A [reader](https://github.com/jschairb) kindly reminded
 me about <tt>Kernel::silence_warnings</tt>, so you can optionally redefine
-that Rack::Test's constant as follow and never see that **noise** again:
+that Rack::Test's constant as follows and never see that **noise** again:
 
 <script src="https://gist.github.com/729996.js?file=silent-rack-test-default-host.rb">false;</script>
 
