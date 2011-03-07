@@ -35,6 +35,15 @@ it's **harmless noise** in this case.
 
 <script src="https://gist.github.com/729996.js?file=rack-test-default-host.rb">false;</script>
 
+**Update 2011-03-07**: A [reader](https://github.com/jschairb) kindly reminded
+me about <tt>Kernel::silence_warnings</tt>, so you can optionally redefine
+that Rack::Test's constant as follow and never see that **noise** again:
+
+<script src="https://gist.github.com/729996.js?file=silent-rack-test-default-host.rb">false;</script>
+
+Please, beware of the peril of "playing with constants" and don't blame
+neither of us if your application blows up misteriously :-) any time later.
+
 ## HTML5 data attributes
 
 So now we have almost everything working again... until we smash into the
