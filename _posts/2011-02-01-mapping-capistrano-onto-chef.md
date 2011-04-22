@@ -6,10 +6,10 @@ decided to drop their Capistrano based deployment
 process](http://www.engineyard.com/blog/2011/appcloud-cli-deploy-process-is-the-future/),
 I found myself thinking about mapping between Capistrano e Chef...
 
-<a href="/images/posts/deploy-to-chef.png" target="_blank"><img
+<p><a href="/images/posts/deploy-to-chef.png" target="_blank"><img
 src="/images/posts/deploy-to-chef-thumbnail.png" class="float-right"
 alt="Capistrano's deploy task to Chef's deploy resource" title="Capistrano's
-deploy task to Chef's deploy resource"/></a>
+deploy task to Chef's deploy resource"/></a></p>
 
 Chef's stock deploy resource is approximately equivalent to Capistrano's
 <tt>deploy</tt> task (or <tt>deploy:migrations</tt>, both with the remote
@@ -27,13 +27,12 @@ with Capistrano, you can insert callbacks pratically anywhere. When switching
 from Capistrano to Chef you are obliged to rework your custom deployment
 recipes, eventually merging or rearranging your callbacks.
 
+So, roughly speaking:
 <a href="/images/posts/deploy-migrations-to-chef.png" target="_blank"><img
 src="/images/posts/deploy-migrations-to-chef-thumbnail.png"
 class="float-right" alt="Capistrano's deploy:migrations to Chef's deploy
 resource" title="Capistrano's deploy:migrations to Chef's deploy
 resource"/></a>
-
-So, roughly speaking:
 
 * whatever you ran before <tt>deploy</tt> or <tt>deploy:migrations</tt>,
   before or after <tt>update_code</tt> and before or after
