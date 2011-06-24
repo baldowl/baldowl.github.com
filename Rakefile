@@ -27,6 +27,7 @@ namespace :archives do
           File.open page, 'w' do |f|
             f.puts "---
 layout: default
+title: Archive of #{args.year} posts
 ---
 {% assign archive_year = '#{args.year}' %}
 {% include year.html %}"
