@@ -280,13 +280,13 @@ blockquote {
 }
 
 .post .post-footer .date {
-  background: url(/images/clock.gif) no-repeat 0px center;
+  background: url(/images/clock.png) no-repeat 0px center;
   padding-left: 20px;
   margin: 0px 10px 0px 5px;
 }
 
 .post .post-footer .comments {
-  background: url(/images/comment.gif) no-repeat 0px center;
+  background: url(/images/comment.png) no-repeat 0px center;
   padding-left: 20px;
   margin: 0px 10px 0px 5px;
 }
