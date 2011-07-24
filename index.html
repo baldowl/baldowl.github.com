@@ -29,6 +29,7 @@ title: Baldowl - my nest somewhere in GitHub's forest
   {{ post.content }}
 
   <p class="post-footer align-right clear">
+    {% if post.tags != empty %}<span class="tags">{{ post.tags | sort | join: ', ' }}</span>{% endif %}
     {% if post.date %}<span class="date">{{ post.date | date: '%b %d, %Y' }}</span>{% endif %}
   </p>
 </div>
