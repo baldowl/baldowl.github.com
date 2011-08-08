@@ -6,10 +6,10 @@ decided to drop their Capistrano based deployment
 process](http://www.engineyard.com/blog/2011/appcloud-cli-deploy-process-is-the-future/),
 I found myself thinking about mapping between Capistrano e Chef...
 
-<p><a href="/images/posts/deploy-to-chef.png" target="_blank"><img
+<a href="/images/posts/deploy-to-chef.png" target="_blank"><img
 src="/images/posts/deploy-to-chef-thumbnail.png" class="float-right"
 alt="Capistrano's deploy task to Chef's deploy resource" title="Capistrano's
-deploy task to Chef's deploy resource"/></a></p>
+deploy task to Chef's deploy resource"></a>
 
 Chef's stock deploy resource is approximately equivalent to Capistrano's
 <tt>deploy</tt> task (or <tt>deploy:migrations</tt>, both with the remote
