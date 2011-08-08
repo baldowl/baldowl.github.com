@@ -100,7 +100,7 @@ code, pre, tt	{
   font-size: 11px;
 }
 
-acronym {
+abbr {
   cursor: help;
   border-bottom: 1px solid #777;
 }
