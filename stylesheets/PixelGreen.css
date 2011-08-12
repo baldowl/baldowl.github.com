@@ -82,20 +82,7 @@ img.float-left {
   margin: 5px 15px 5px 0px;
 }
 
-code {
-  margin: 5px 0px;
-  padding: 10px;
-  text-align: left;
-  display: block;
-  overflow: auto;
-  font: 500 1em/1.5em 'Lucida Console', 'courier new', monospace;
-  /* white-space: pre; */
-  background: #FAFAFA;
-  border: 1px solid #f2f2f2;
-  border-left: 3px solid #72A545;
-}
-
-code, pre, tt	{
+tt {
   font-family: Monaco, monospace;
   font-size: 11px;
 }
@@ -103,17 +90,6 @@ code, pre, tt	{
 abbr {
   cursor: help;
   border-bottom: 1px solid #777;
-}
-
-blockquote {
-  margin: 15px;
-  padding: 0px 0px 0px 20px;
-  background-color: #FAFAFA;
-  background-position: 8px 10px;
-  border: 1px solid #f2f2f2;
-  border-left: 3px solid #72A545;
-  font: bold 1.2em/1.5em "Trebuchet MS", Tahoma, sans-serif;
-  color: #666666;
 }
 
 /***********************
@@ -306,7 +282,7 @@ blockquote {
   text-align: left;
 }
 
-#footer h1, #footer p {
+#footer p {
   margin-left: 0px;
 }
 
@@ -324,11 +300,6 @@ blockquote {
 #footer-content a:hover {
   text-decoration: underline;
   color: #333;
-}
-
-#footer-content .col2 {
-  width: 30%;
-  padding: 0px 0px 30px 0px;
 }
 
 /* alignment classes */
