@@ -12,7 +12,7 @@ scripting the remaining boring part?", so fired up
 [fog](https://github.com/geemus/fog)'s cli and wrote something like following
 lines (amended to hide the real names and fit the page):
 
-<script src="https://gist.github.com/796353.js?file=gistfile1.rb">false;</script>
+<script src="https://gist.github.com/796353.js?file=gistfile1.rb"></script>
 
 Operations could have been chained a little bit more, but I prefer to build
 things piece by piece. I used ActiveSupport because I'm too lazy to do the

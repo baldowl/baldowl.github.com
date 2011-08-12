@@ -11,7 +11,7 @@ been able to use it right out of the box!
 To fix the all too frequent "undefined method \`visit'" error message I had to
 add a couple of require statements:
 
-<script src="https://gist.github.com/977000.js?file=capybara-workaround.rb">false;</script>
+<script src="https://gist.github.com/977000.js?file=capybara-workaround.rb"></script>
 
 Dropped that file in the <tt>support</tt> directory and everything turned
 green.

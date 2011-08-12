@@ -14,7 +14,7 @@ Testing this solution was just a matter of stopping the cluster of Mongrels and 
 
 What was left to do? Oh, yeah, replace Mongrel in the Capistrano's recipes too. Nothing much to do here: remove the Mongrel cluster's recipe and add these few lines:
 
-<script src="http://gist.github.com/431137.js?file=thin_recipe.rb">false;</script>
+<script src="http://gist.github.com/431137.js?file=thin_recipe.rb"></script>
 
 To be sure that a potential reboot will not leave the web server without its new companions, an "installation" of Thin and an update of Debian's <tt>rc.d</tt> was in order.
 

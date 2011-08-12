@@ -18,10 +18,10 @@ So, here what I did to add a gem to a toy app using **Bundler08**:
 1. installed the **bundler08** gem in the usual way;
 2. moved to the app's "root" directory and generated a <tt>Gemfile</tt> running <tt>gem bundle --init</tt> (the content is a simple introduction to **Bundler08**);
 3. replaced the <tt>Gemfile</tt>'s content with the following lines:
-<script src="http://gist.github.com/441750.js?file=Example%20of%20a%20Gemfile">false;</script>
+<script src="http://gist.github.com/441750.js?file=Example%20of%20a%20Gemfile"></script>
 4. ran <tt>gem bundle</tt>, which downloaded the listed gem and installed it into <tt>vendor</tt>;
 5. added the following lines at the beginning of the standard <tt>rb_main.rb</tt>:
-<script src="http://gist.github.com/441750.js?file=Additions%20to%20rb_main.rb">false;</script>
+<script src="http://gist.github.com/441750.js?file=Additions%20to%20rb_main.rb"></script>
 6. added **both** <tt>Gemfile</tt> (normal way) and <tt>vendor</tt> (as a directory reference) to the Xcode project;
 7. added **both** <tt>Gemfile</tt> and <tt>vendor</tt> to the Git repository (I think there's no need to ignore some of <tt>vendor</tt>'s contents).
 

@@ -33,7 +33,7 @@ requests with a given payload.
 So, GET vs. POST? Can we POST to Google to report an updated sitemap? Maybe...
 if Google does not adhere to the REST credo.
 
-<script src="http://gist.github.com/583814.js?file=Pinging%20Google%20with%20a%20POST%20request">false;</script>
+<script src="http://gist.github.com/583814.js?file=Pinging%20Google%20with%20a%20POST%20request"></script>
 
 As of today, in response to the preceding command Google returns a 200
 response, i.e., it seems we can "ping" Google with a **POST** request and even

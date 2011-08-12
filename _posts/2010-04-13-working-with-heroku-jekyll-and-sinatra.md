@@ -20,7 +20,7 @@ The possible solutions:
 
 * stick with Sinatra pre-1.0 and follow the [blog post](http://jstorimer.com/2009/12/29/jekyll-on-heroku.html);
 
-* still follow the blog post but turn off the management of static assets by Sinatra 1.0 and handle them manually with a big splat argument route: <script src="http://gist.github.com/364420.js?file=config.ru">false;</script><script src="http://gist.github.com/364420.js?file=app.rb">false;</script>
+* still follow the blog post but turn off the management of static assets by Sinatra 1.0 and handle them manually with a big splat argument route: <script src="http://gist.github.com/364420.js?file=config.ru"></script><script src="http://gist.github.com/364420.js?file=app.rb"></script>
 
 * put the product of Jekyll in <tt>public</tt>, let Heroku's web server handle every request and use Sinatra or plain Rack just to map <tt>'/'</tt> to <tt>'/index.html'</tt>.
 

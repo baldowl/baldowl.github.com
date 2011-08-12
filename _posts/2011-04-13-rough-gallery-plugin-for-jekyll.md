@@ -13,4 +13,4 @@ was a national holiday :-)) and so put together a rough extension for Jekyll
 which has already slept too long on my disk. Here's the code, without warranty
 of any kind (including usefullness).
 
-<script src="https://gist.github.com/917251.js?file=gallery.rb">false;</script>
+<script src="https://gist.github.com/917251.js?file=gallery.rb"></script>

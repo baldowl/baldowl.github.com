@@ -11,7 +11,7 @@ resort to use the lower level mechanism of requests. Here's a (bad,
 procedural, defective of any error checking) script I wrote afterward by
 collecting and cleaning up the cli session:
 
-<script src="https://gist.github.com/833374.js?file=multipart_upload.rb">false;</script>
+<script src="https://gist.github.com/833374.js?file=multipart_upload.rb"></script>
 
 So, roughly speaking, I started asking AWS the list of pending multipart
 uploads (and so discovered a couple of them initiated by another tool and

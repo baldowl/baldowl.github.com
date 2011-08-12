@@ -13,7 +13,7 @@ are more than enough.
 
 So, my homemade solution was to use the <tt>before_migrate</tt> callback:
 
-<script src="https://gist.github.com/667489.js?file=before_migrate.rb">false;</script>
+<script src="https://gist.github.com/667489.js?file=before_migrate.rb"></script>
 
 Nesting a script resource inside the deploy resource forced me to "extract"
 some things from <tt>new_resource</tt> (the <tt>deploy</tt> resource) and

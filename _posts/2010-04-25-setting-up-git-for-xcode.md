@@ -11,12 +11,12 @@ After playing around for a while with the many windows, I thought about **SCM**:
 
 The real issue is: what should be **left out** and what must be included in a repository, irrespective of the used VCS? Well, [Cocoa Programming](http://www.pragprog.com/titles/dscpq/cocoa-programming) is silent on this side and the Apple's official documentation does not seem to include a simple list "In/Out", but after perusing documents about project structure and source code management with Xcode, I think to have **a basic, starting list** of things to ignore, so here it is, according to the Git parlance:
 
-<script src="http://gist.github.com/378312.js?file=.gitignore">false;</script>
+<script src="http://gist.github.com/378312.js?file=.gitignore"></script>
 
 Apple writes that you should include the <tt>.pbxuser</tt> files because they store user settings; I'm not so sure it be a good idea or not, but I've just started to play with Xcode :-)
 
 Given that Apple itself writes that there's no value in comparing and merging XML files, it's better to tweak Git (I'm so bold as to include in the following list also the XML Nib files):
 
-<script src="http://gist.github.com/378312.js?file=.gitattributes">false</script>
+<script src="http://gist.github.com/378312.js?file=.gitattributes"></script>
 
 I know, there are other lists circulating on the net; what's above it's just my "two cents", nothing more.

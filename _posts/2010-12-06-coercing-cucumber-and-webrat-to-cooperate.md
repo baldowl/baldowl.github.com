@@ -15,7 +15,7 @@ mode is wrong. We can edit that file, trusting that our VCS will help us to
 recover the needed modifications next time we upgrade Cucumber, or we can drop
 a new file in <tt>features/support/</tt> and override the configuration:
 
-<script src="https://gist.github.com/729996.js?file=webrat.rb">false;</script>
+<script src="https://gist.github.com/729996.js?file=webrat.rb"></script>
 
 ## Rack::Test
 
@@ -33,13 +33,13 @@ not follow it.
 We must redefine a Rack::Test's constant; Ruby will produce a warning, but
 it's **harmless noise** in this case.
 
-<script src="https://gist.github.com/729996.js?file=rack-test-default-host.rb">false;</script>
+<script src="https://gist.github.com/729996.js?file=rack-test-default-host.rb"></script>
 
 **Update 2011-03-07**: A [reader](https://github.com/jschairb) kindly reminded
 me about <tt>Kernel::silence_warnings</tt>, so you can optionally redefine
 that Rack::Test's constant as follows and never see that **noise** again:
 
-<script src="https://gist.github.com/729996.js?file=silent-rack-test-default-host.rb">false;</script>
+<script src="https://gist.github.com/729996.js?file=silent-rack-test-default-host.rb"></script>
 
 Please, beware of the peril of "playing with constants" and don't blame
 neither of us if your application blows up misteriously :-) any time later.
@@ -52,7 +52,7 @@ following problem.
 Let's say we have a list of records, each paired with a "Delete" link. We have
 the following scenario, spiced up with the help of [Pickle](https://github.com/ianwhite/pickle):
 
-<script src="https://gist.github.com/729996.js?file=gistfile1.feature">false;</script>
+<script src="https://gist.github.com/729996.js?file=gistfile1.feature"></script>
 
 We run Cucumber and the scenario does not pass. Webrat uses link's **onclick**
 to decide if GET or something else must be used, but Ruby on Rails 3 does not
@@ -60,12 +60,12 @@ produce the same, old HTML code: it now embraces the unobtrusiveness way of
 life, so it **got rid of onclick attributes** and replaced them with HTML5
 **data attributes**:
 
-<script src="https://gist.github.com/729996.js?file=gistfile2.html">false;</script>
+<script src="https://gist.github.com/729996.js?file=gistfile2.html"></script>
 
 Until a fix emerges for this, a workaround could be something like the
 following step definition:
 
-<script src="https://gist.github.com/729996.js?file=user_steps.rb">false;</script>
+<script src="https://gist.github.com/729996.js?file=user_steps.rb"></script>
 
 ## The happy end
 

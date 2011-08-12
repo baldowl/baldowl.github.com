@@ -21,7 +21,7 @@ untouched.
 
 So, here's what I came up with:
 
-<script src="https://gist.github.com/1102821.js?file=strip_exif_tags_filter.rb">false;</script>
+<script src="https://gist.github.com/1102821.js?file=strip_exif_tags_filter.rb"></script>
 
 It's a really, really simple filter... I'd dare to say it's rather stupid :-)
 and its use is a no-brainer.
