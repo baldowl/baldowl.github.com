@@ -22,11 +22,6 @@ id_base: tag:baldowl.github.com,2005
       &lt;p&gt;{{ post.content | strip_html | truncatewords: 50 | xml_escape }}&lt;/p&gt;
       &lt;p&gt;&lt;a href=&quot;{{ page.base }}{{ post.url }}&quot;&gt;More...&lt;/a&gt;&lt;/p&gt;
     </content>
-    {% if post.author %}
-    <author>
-      <name>{{ post.author }}</name>
-    </author>
-    {% endif %}
   </entry>
   {% endfor %}
 </feed>
