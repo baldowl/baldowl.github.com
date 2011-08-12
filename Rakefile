@@ -45,7 +45,7 @@ end
 def gathered_data
   old_stdout = $stdout.clone
   $stdout.reopen('/dev/null')
-  $stdout.sync
+  $stdout.sync = true
   @site ||= Jekyll::Site.new(Jekyll.configuration({}))
   @site.read_posts ''
   $stdout.reopen old_stdout
