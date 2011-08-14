@@ -24,50 +24,60 @@
 <body>
   <!-- wrap starts here -->
   <div id="wrap">
-    <div id="header">
-      <div id="header-content">
-        <h1 id="logo"><a href="/">Bald<span class="gray">owl</span></a></h1>
-        <h2 id="slogan">my nest somewhere in GitHub's forest</h2>
+    <header>
+      <div id="header">
+        <hgroup id="header-content">
+          <h1 id="logo"><a href="/">Bald<span class="gray">owl</span></a></h1>
+          <h2 id="slogan">my nest somewhere in GitHub's forest</h2>
+        </hgroup>
       </div>
-    </div>
 
-    <div class="headerphoto"></div>
+      <div class="headerphoto"></div>
+    </header>
 
     <!-- content-wrap starts here -->
     <div id="content-wrap">
       <div id="content">
-        <div id="sidebar">
-          <div class="sidebox">
-            <h1>Here on GitHub</h1>
+        <aside id="sidebar">
+          <nav class="sidebox">
+            <header>
+              <h1>Here on GitHub</h1>
+            </header>
             <ul class="sidemenu" id="github-repos">
             </ul>
-            <p><a href="http://github.com/baldowl">More...</a></p>
-          </div>
+            <footer>
+              <p><a href="http://github.com/baldowl">More...</a></p>
+            </footer>
+          </nav>
 
-          <div class="sidebox">
-            <h1>Working With Rails</h1>
+          <section class="sidebox">
+            <header>
+              <h1>Working With Rails</h1>
+            </header>
             <p><a href="http://workingwithrails.com/recommendation/new/person/15325-emanuele-vicentini"><img style="width: 95%" alt="Recommend Me" src="http://workingwithrails.com/images/tools/compact-med.jpg"></a></p>
-          </div>
+          </section>
 
-          <div class="sidebox">
-            <h1>Archives by year</h1>
+          <nav class="sidebox">
+            <header>
+              <h1>Archives by year</h1>
+            </header>
             <ul class="sidemenu">
               <li><a href="/archives/years/2009">2009</a></li>
               <li><a href="/archives/years/2010">2010</a></li>
               <li><a href="/archives/years/2011">2011</a></li>
             </ul>
-          </div>
-        </div>
+          </nav>
+        </aside>
 
-        <div id="main">
+        <section id="main">
           {{ content }}
-        </div>
+        </section>
       <!-- content-wrap ends here -->
       </div>
     </div>
 
     <!-- footer starts here -->
-    <div id="footer">
+    <footer id="footer">
       <div id="footer-content">
         <div class="float-right">
           <p>Original design by <a href="http://www.styleshout.com/">styleshout</a>;
@@ -75,7 +85,7 @@
         </div>
       </div>
     <!-- footer ends here -->
-    </div>
+    </footer>
   <!-- wrap ends here -->
   </div>
 </body>
