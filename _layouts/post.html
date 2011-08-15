@@ -10,7 +10,7 @@ layout: default
 
   {{ content }}
 
-  <footer class="post-footer align-right clear">
+  <footer class="align-right clear">
     <p>
       {% if page.tags != empty %}<span class="tags">{{ page.tags | sort | join: ', ' }}</span>{% endif %}
       {% if page.date %}<time datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate><span class="date">{{ page.date | date: '%b %d, %Y' }}</span></time>{% endif %}
