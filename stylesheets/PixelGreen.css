@@ -82,9 +82,9 @@ img.float-left {
   margin: 5px 15px 5px 0px;
 }
 
-tt {
+tt, code {
   font-family: Monaco, monospace;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 abbr {
