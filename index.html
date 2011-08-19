@@ -3,7 +3,7 @@ layout: default
 title: Baldowl - my nest somewhere in GitHub's forest
 ---
 {% if paginator.previous_page %}
-  <nav class="page-navigation align-right">
+  <div class="page-navigation align-right">
     <span class="previous-page">
       {% if paginator.previous_page > 1 %}
         <a href="/page{{ paginator.previous_page }}">&laquo; Previous page</a>
@@ -17,7 +17,7 @@ title: Baldowl - my nest somewhere in GitHub's forest
         <a href="/page{{ paginator.next_page }}">Next page &raquo;</a>
       </span>
     {% endif %}
-  </nav>
+  </div>
 {% endif %}
 
 {% for post in paginator.posts %}
@@ -37,7 +37,7 @@ title: Baldowl - my nest somewhere in GitHub's forest
 </article>
 {% endfor %}
 
-<nav class="page-navigation align-right">
+<div class="page-navigation align-right">
   {% if paginator.previous_page %}
     <span class="previous-page">
       {% if paginator.previous_page > 1 %}
@@ -55,4 +55,4 @@ title: Baldowl - my nest somewhere in GitHub's forest
       <a href="/page{{ paginator.next_page }}">Next page &raquo;</a>
     </span>
   {% endif %}
-</nav>
+</div>
