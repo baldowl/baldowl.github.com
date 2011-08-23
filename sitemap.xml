@@ -9,16 +9,16 @@ base: http://baldowl.github.com
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>{{ page.base }}</loc>
-    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <lastmod>{{ site.time | date: "%F" }}</lastmod>
   </url>
 
   {% for post in site.posts %}<url>
     <loc>{{ page.base }}{{ post.url }}</loc>
-    <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
+    <lastmod>{{ post.date | date: "%F" }}</lastmod>
   </url>{% endfor %}
 
   {% for html_page in site.html_pages %}<url>
     <loc>{{ page.base }}{{ html_page.url }}</loc>
-    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <lastmod>{{ site.time | date: "%F" }}</lastmod>
   </url>{% endfor %}
 </urlset>

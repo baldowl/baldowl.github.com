@@ -31,7 +31,7 @@ title: Baldowl - my nest somewhere in GitHub's forest
   <footer class="align-right clear">
     <p>
       {% if post.tags != empty %}<span class="tags">{{ post.tags | sort | join: ', ' }}</span>{% endif %}
-      <time datetime="{{ post.date | date: '%Y-%m-%d' }}" pubdate><span class="date">{{ post.date | date: '%b %d, %Y' }}</span></time>
+      <time datetime="{{ post.date | date: '%F' }}" pubdate><span class="date">{{ post.date | date: '%b %d, %Y' }}</span></time>
     </p>
   </footer>
 </article>

@@ -7,7 +7,7 @@
   {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if post_year == archive_year %}
     <li>
-      <p><strong><time>{{ post.date | date: "%Y-%m-%d" }}</time>:</strong>
+      <p><strong><time>{{ post.date | date: "%F" }}</time>:</strong>
       <a href="{{ post.url }}">{{ post.title }}</a></p>
       <p>{{ post.content | strip_html | truncatewords: 30 }}</p>
     </li>
