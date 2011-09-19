@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'jekyll'
 
-task :default => 'archives:years:check'
+task :default => ['archives:years:check', 'archives:tags:check']
 
 namespace :archives do
   namespace :years do
@@ -37,6 +37,43 @@ title: Archive of #{args.year} posts
         end
       else
         puts 'Missing year; nothing to do'
+      end
+    end
+  end
+
+  namespace :tags do
+    desc "Check tag archives' consistency"
+    task :check do
+      puts "Checking tag archives..."
+      published_tags = gathered_data.posts.map {|p| p.tags}.flatten.uniq.sort
+      archived_tags = Dir.glob('archives/tags/*').map {|f| File.basename(f)}
+
+      ghost_archives = archived_tags - published_tags
+      puts "Unneeded tag archives: #{ghost_archives.join(', ')}" unless ghost_archives.empty?
+
+      missing_archives = published_tags - archived_tags
+      puts "Missing tag archives: #{missing_archives.join(', ')}" unless missing_archives.empty?
+    end
+
+    desc "Build the TAG archive"
+    task :build, :tag do |t, args|
+      if args.tag
+        page = "archives/tags/#{args.tag}/index.html"
+        unless File.file?(page)
+          FileUtils.mkdir_p File.dirname(page)
+          File.open page, 'w' do |f|
+            f.puts "---
+layout: default
+title: Archive of \"#{args.tag}\" posts
+---
+{% assign archive_tag = '#{args.tag}' %}
+{% include tag.html %}"
+          end
+        else
+          puts "#{args.tag} archive already exists; nothing to do"
+        end
+      else
+        puts 'Missing tag; nothing to do'
       end
     end
   end
