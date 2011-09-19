@@ -30,7 +30,7 @@ title: Baldowl - my nest somewhere in GitHub's forest
 
   <footer class="align-right clear">
     <p>
-      {% if post.tags != empty %}<span class="tags">{{ post.tags | sort | join: ', ' }}</span>{% endif %}
+      {% if post.tags != empty %}<span class="tags">{% for tag in post.tags %}<a href="/archives/tags/{{ tag | xml_escape }}">{{ tag }}</a>{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}</span>{% endif %}
       <time datetime="{{ post.date | date: '%F' }}" pubdate><span class="date">{{ post.date | date: '%b %d, %Y' }}</span></time>
     </p>
   </footer>

@@ -249,7 +249,6 @@ abbr {
   border: 1px solid #f2f2f2;
   padding: 5px;
   margin-top: 20px;
-  font-size: 95%;
 }
 
 .post footer p {
@@ -266,6 +265,10 @@ abbr {
   background: url(/images/tag.png) no-repeat 0px center;
   padding-left: 20px;
   margin: 0px 10px 0px 5px;
+}
+
+.post footer .tags a {
+  background: none;
 }
 
 .post footer .comments {
