@@ -5,3 +5,5 @@ paginate: 3
 markdown: kramdown
 exclude:
   - Rakefile
+
+base_url: http://baldowl.github.com

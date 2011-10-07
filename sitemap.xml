@@ -1,5 +1,4 @@
 ---
-base: http://baldowl.github.com
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
@@ -8,17 +7,17 @@ base: http://baldowl.github.com
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>{{ page.base }}</loc>
+    <loc>{{ site.base_url }}</loc>
     <lastmod>{{ site.time | date: "%F" }}</lastmod>
   </url>
 
   {% for post in site.posts %}<url>
-    <loc>{{ page.base }}{{ post.url }}</loc>
+    <loc>{{ site.base_url }}{{ post.url }}</loc>
     <lastmod>{{ post.date | date: "%F" }}</lastmod>
   </url>{% endfor %}
 
   {% for html_page in site.html_pages %}<url>
-    <loc>{{ page.base }}{{ html_page.url }}</loc>
+    <loc>{{ site.base_url }}{{ html_page.url }}</loc>
     <lastmod>{{ site.time | date: "%F" }}</lastmod>
   </url>{% endfor %}
 </urlset>
