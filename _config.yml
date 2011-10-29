@@ -7,3 +7,5 @@ exclude:
   - Rakefile
 
 base_url: http://baldowl.github.com
+
+disqus_shortname: baldowl
