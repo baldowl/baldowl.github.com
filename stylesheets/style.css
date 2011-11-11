@@ -1,3 +1,59 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, a img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img, a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
 /*******************************************
  *AUTHOR:        Erwin Aligam
  *WEBSITE:       http://www.styleshout.com/
@@ -10,14 +66,7 @@
  *   HTML ELEMENTS
  ******************************************** */
 /* top elements */
-* {
-  padding: 0px;
-  margin: 0px;
-}
-
 body {
-  margin: 0px;
-  padding: 0px;
   font: normal 73%/1.5em "Trebuchet MS", Tahoma, sans-serif;
   color: #555555;
   background: white url(/images/bg.jpg) repeat-x;
@@ -65,15 +114,15 @@ ul, ol {
 }
 
 /* images */
-img {
+img, a img {
   border: 1px solid #dadada;
   padding: 5px;
   background: #fafafa;
 }
-img.float-right {
+img.float-right, a img.float-right {
   margin: 5px 0px 5px 15px;
 }
-img.float-left {
+img.float-left, a img.float-left {
   margin: 5px 15px 5px 0px;
 }
 
@@ -102,7 +151,6 @@ abbr {
 
 #header-content {
   margin: 0px auto;
-  padding: 0px;
   position: relative;
 }
 #header-content h1#logo {
@@ -111,14 +159,15 @@ abbr {
   letter-spacing: -2px;
   color: white;
   margin: 0px;
-  padding: 0px;
   /* change the values of left and top to adjust the position of the logo */
   top: 0px;
   left: 0px;
 }
 #header-content h1#logo a {
-  text-decoration: none;
   color: white;
+}
+#header-content h1#logo a:hover {
+  text-decoration: none;
 }
 #header-content #slogan {
   position: absolute;
@@ -126,7 +175,6 @@ abbr {
   text-transform: none;
   color: white;
   margin: 0px;
-  padding: 0px;
   /* change the values of left and top to adjust the position of the slogan */
   top: 55px;
   left: 40px;
@@ -150,7 +198,6 @@ abbr {
 
 #content {
   text-align: left;
-  padding: 0px;
   margin: 0px auto;
 }
 
@@ -159,7 +206,6 @@ abbr {
   float: right;
   width: 28%;
   margin: 10px 0px;
-  padding: 0px;
 }
 #sidebar h1 {
   padding: 10px 0px 5px 10px;
@@ -205,7 +251,6 @@ abbr {
   float: left;
   width: 70%;
   margin: 0px 0px 10px 0px;
-  padding: 0px;
 }
 #main h1 {
   padding: 10px 0px 0px 5px;
@@ -224,7 +269,6 @@ abbr {
   -webkit-border-radius: 6px;
   border-radius: 6px;
   margin: 10px 0px;
-  padding: 0px;
 }
 .post footer {
   background-color: #fafafa;
@@ -260,13 +304,8 @@ abbr {
 /* footer */
 #footer {
   clear: both;
-  margin: 0px;
-  padding: 0px;
   font: normal 0.95em/1.6em "Trebuchet MS", Tahoma, Arial, sans-serif;
   text-align: left;
-}
-#footer p {
-  margin-left: 0px;
 }
 
 #footer-content {
