@@ -4,7 +4,9 @@ server_port: 3000
 paginate: 3
 markdown: kramdown
 exclude:
+  - config.rb
   - Rakefile
+  - sass
 
 base_url: http://baldowl.github.com
 
