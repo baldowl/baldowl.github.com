@@ -1,5 +1,13 @@
 @import compass/reset
 
+$icons-spacing: 3px
+@import 'icons/*.png'
+
+@mixin footer-blob($image)
+  @include icons-sprite($image)
+  padding-left: 20px
+  margin: 0px 10px 0px 5px
+
 /********************************************
  *AUTHOR:        Erwin Aligam
  *WEBSITE:       http://www.styleshout.com/
@@ -24,11 +32,9 @@ body
 /* links
 
 a
-  background: inherit
   color: #72A545
   text-decoration: none
   &:hover
-    background: inherit
     color: #006699
     text-decoration: underline
 
@@ -205,21 +211,11 @@ abbr
     p
       margin: 0px
     .date
-      background: url(/images/clock.png) no-repeat 0px center
-      padding-left: 20px
-      margin: 0px 10px 0px 5px
+      @include footer-blob('clock')
     .tags
-      background: url(/images/tag.png) no-repeat 0px center
-      padding-left: 20px
-      margin: 0px 10px 0px 5px
-      a
-        background: none
+      @include footer-blob('tag')
     .comments
-      background: url(/images/comment.png) no-repeat 0px center
-      padding-left: 20px
-      margin: 0px 10px 0px 5px
-      a
-        background: none
+      @include footer-blob('comment')
 
 /* footer
 

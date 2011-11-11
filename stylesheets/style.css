@@ -54,6 +54,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+.icons-sprite, .post footer .date, .post footer .tags, .post footer .comments {
+  background: url('/images/icons-sbd4f638d9d.png') no-repeat;
+}
+
 /*******************************************
  *AUTHOR:        Erwin Aligam
  *WEBSITE:       http://www.styleshout.com/
@@ -75,12 +79,10 @@ body {
 
 /* links */
 a {
-  background: inherit;
   color: #72a545;
   text-decoration: none;
 }
 a:hover {
-  background: inherit;
   color: #006699;
   text-decoration: underline;
 }
@@ -280,25 +282,19 @@ abbr {
   margin: 0px;
 }
 .post footer .date {
-  background: url(/images/clock.png) no-repeat 0px center;
+  background-position: 0 0;
   padding-left: 20px;
   margin: 0px 10px 0px 5px;
 }
 .post footer .tags {
-  background: url(/images/tag.png) no-repeat 0px center;
+  background-position: 0 -29px;
   padding-left: 20px;
   margin: 0px 10px 0px 5px;
-}
-.post footer .tags a {
-  background: none;
 }
 .post footer .comments {
-  background: url(/images/comment.png) no-repeat 0px center;
+  background-position: 0 -15px;
   padding-left: 20px;
   margin: 0px 10px 0px 5px;
-}
-.post footer .comments a {
-  background: none;
 }
 
 /* footer */
