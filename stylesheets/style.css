@@ -220,6 +220,9 @@ abbr {
   border: 1px solid #efeded;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
   border-radius: 6px;
   margin-bottom: 10px;
 }
@@ -269,6 +272,9 @@ abbr {
   border: 1px solid #efeded;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
   border-radius: 6px;
   margin: 10px 0px;
 }
