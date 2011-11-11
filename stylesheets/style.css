@@ -79,12 +79,14 @@ body {
 
 /* links */
 a {
-  color: #72a545;
   text-decoration: none;
+  color: #72a545;
+}
+a:hover {
+  text-decoration: underline;
 }
 a:hover {
   color: #006699;
-  text-decoration: underline;
 }
 
 /* headers */
@@ -237,18 +239,20 @@ abbr {
   padding: 0px 10px;
 }
 #sidebar ul.sidemenu a {
+  color: #333333;
   display: block;
   font-weight: normal;
-  color: #333333;
   height: 1.5em;
   padding: 0.3em 0px 0.3em 15px;
   line-height: 1.5em;
   text-decoration: none;
 }
 #sidebar ul.sidemenu a:hover {
+  color: #65944a;
+}
+#sidebar ul.sidemenu a:hover {
   padding: 0.3em 0px 0.3em 10px;
   border-left: 5px solid #65944a;
-  color: #65944a;
 }
 
 /* main */
@@ -316,11 +320,9 @@ abbr {
   padding-left: 15px;
 }
 #footer-content a {
-  text-decoration: none;
   color: #777777;
 }
 #footer-content a:hover {
-  text-decoration: underline;
   color: #333333;
 }
 

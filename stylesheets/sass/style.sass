@@ -10,6 +10,8 @@ $icons-spacing: 3px
 
 $default-border-radius: 6px
 @import compass/css3/border-radius
+@import compass/typography/links/hover-link
+@import compass/typography/links/link-colors
 
 /********************************************
  *AUTHOR:        Erwin Aligam
@@ -35,11 +37,10 @@ body
 /* links
 
 a
-  color: #72A545
-  text-decoration: none
-  &:hover
-    color: #006699
-    text-decoration: underline
+  @include hover-link
+  @include link-colors(#72A545, #006699)
+  img
+    @extend img
 
 /* headers
 
@@ -74,9 +75,6 @@ img
     margin: 5px 0px 5px 15px
   &.float-left
     margin: 5px 15px 5px 0px
-
-a img
-  @extend img
 
 tt, code
   font-family: Monaco, monospace
@@ -171,9 +169,9 @@ abbr
   li
     padding: 0px 10px
   a
+    @include link-colors(#333, #65944A)
     display: block
     font-weight: normal
-    color: #333
     height: 1.5em
     padding: 0.3em 0px 0.3em 15px
     line-height: 1.5em
@@ -181,7 +179,6 @@ abbr
     &:hover
       padding: 0.3em 0px 0.3em 10px
       border-left: 5px solid  #65944A
-      color: #65944A
 
 /* main
 
@@ -228,11 +225,7 @@ abbr
   margin: 0px auto
   padding-left: 15px
   a
-    text-decoration: none
-    color: #777
-    &:hover
-      text-decoration: underline
-      color: #333
+    @include link-colors(#777, #333)
 
 /* alignment classes
 
