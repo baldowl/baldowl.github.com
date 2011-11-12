@@ -73,7 +73,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   font: normal 73%/1.5em "Trebuchet MS", Tahoma, sans-serif;
   color: #555555;
-  background: white url(/images/bg.jpg) repeat-x;
+  background: white url('/images/bg.jpg') repeat-x;
   text-align: center;
 }
 
@@ -190,7 +190,7 @@ abbr {
   width: 810px;
   height: 200px;
   padding: 15px 10px 10px 10px;
-  background: white url(/images/headerphoto.jpg) no-repeat center;
+  background: white url('/images/headerphoto.jpg') no-repeat center;
 }
 
 /* content */
@@ -268,11 +268,11 @@ abbr {
   font: normal 1.5em "Trebuchet MS", Tahoma, Sans-serif;
 }
 #main ul li {
-  list-style-image: url(/images/bullet.gif);
+  list-style-image: url('/images/bullet.gif');
 }
 
 .post {
-  background: white url(/images/gradientbg.jpg) repeat-x;
+  background: white url('/images/gradientbg.jpg') repeat-x;
   border: 1px solid #efeded;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;

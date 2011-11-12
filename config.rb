@@ -6,3 +6,4 @@ javascripts_dir = 'javascripts'
 output_style = :expanded
 line_comments = false
 preferred_syntax = :sass
+asset_cache_buster :none
