@@ -364,8 +364,3 @@ abbr {
   margin: 0px 10px;
   border: 1px solid #65944a;
 }
-
-/* HTML5 */
-section, article, header, footer, nav, aside, hgroup {
-  display: block;
-}
