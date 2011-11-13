@@ -10,8 +10,14 @@ $icons-spacing: 3px
 
 $default-border-radius: 6px
 @import compass/css3/border-radius
+@import compass/css3/opacity
+@import compass/css3/transition
 @import compass/typography/links/hover-link
 @import compass/typography/links/link-colors
+
+$main_width: 88%
+$gutter: 2%
+$sidebar_width: 100% - $main_width - $gutter
 
 /********************************************
  *AUTHOR:        Erwin Aligam
@@ -29,7 +35,7 @@ $default-border-radius: 6px
 /* top elements
 
 body
-  font: normal 73% / 1.5em "Trebuchet MS", Tahoma, sans-serif
+  font: normal 85% / 1.5em "Trebuchet MS", Tahoma, sans-serif
   color: #555
   background: white image-url('bg.jpg') repeat-x
   text-align: center
@@ -147,44 +153,40 @@ abbr
 
 #sidebar
   float: right
-  width: 28%
+  width: $sidebar_width
   margin: 10px 0px
-  h1
-    padding: 10px 0px 5px 10px
-    margin: 0px
-    font: bold 1.3em 'Trebuchet MS', Tahoma, Sans-serif
-
-.sidebox
-  background: #F5F5F5
-  border: 1px solid #EFEDED
-  @include border-radius
-  margin-bottom: 10px
+  .sidebox
+    margin-bottom: 10px
+    text-align: center
+    h1
+      padding: 10px 0px 5px 0px
+      margin: 0px
+      font: bold 1.3em 'Trebuchet MS', Tahoma, Sans-serif
 
 /* sidebar menu
 
-#sidebar ul.sidemenu
-  list-style: none
-  margin: 10px 0px 15px 0px
-  padding: 0px
-  li
-    padding: 0px 10px
-  a
-    @include link-colors(#333, #65944A)
-    display: block
-    font-weight: normal
-    height: 1.5em
-    padding: 0.3em 0px 0.3em 15px
-    line-height: 1.5em
-    text-decoration: none
-    &:hover
-      padding: 0.3em 0px 0.3em 10px
-      border-left: 5px solid  #65944A
+#sidebar
+  ul.sidemenu
+    list-style: none
+    margin: 0px
+    padding: 0px
+    li
+      a
+        @include link-colors(#333, #65944A)
+        text-decoration: none
+      img
+        background: inherit
+        border-width: 0px
+        @include opacity(0.6)
+        @include single-transition(opacity, 0.4s, ease-in)
+        &:hover
+          @include opaque
 
 /* main
 
 #main
   float: left
-  width: 70%
+  width: $main_width
   margin: 0px 0px 10px 0px
   h1
     padding: 10px 0px 0px 5px

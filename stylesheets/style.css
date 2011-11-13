@@ -71,7 +71,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  ******************************************** */
 /* top elements */
 body {
-  font: normal 73%/1.5em "Trebuchet MS", Tahoma, sans-serif;
+  font: normal 85%/1.5em "Trebuchet MS", Tahoma, sans-serif;
   color: #555555;
   background: white url('/images/bg.jpg') repeat-x;
   text-align: center;
@@ -208,57 +208,59 @@ abbr {
 /* sidebar */
 #sidebar {
   float: right;
-  width: 28%;
+  width: 10%;
   margin: 10px 0px;
 }
-#sidebar h1 {
-  padding: 10px 0px 5px 10px;
+#sidebar .sidebox {
+  margin-bottom: 10px;
+  text-align: center;
+}
+#sidebar .sidebox h1 {
+  padding: 10px 0px 5px 0px;
   margin: 0px;
   font: bold 1.3em "Trebuchet MS", Tahoma, Sans-serif;
-}
-
-.sidebox {
-  background: #f5f5f5;
-  border: 1px solid #efeded;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-  margin-bottom: 10px;
 }
 
 /* sidebar menu */
 #sidebar ul.sidemenu {
   list-style: none;
-  margin: 10px 0px 15px 0px;
+  margin: 0px;
   padding: 0px;
 }
-#sidebar ul.sidemenu li {
-  padding: 0px 10px;
-}
-#sidebar ul.sidemenu a {
+#sidebar ul.sidemenu li a {
   color: #333333;
-  display: block;
-  font-weight: normal;
-  height: 1.5em;
-  padding: 0.3em 0px 0.3em 15px;
-  line-height: 1.5em;
   text-decoration: none;
 }
-#sidebar ul.sidemenu a:hover {
+#sidebar ul.sidemenu li a:hover {
   color: #65944a;
 }
-#sidebar ul.sidemenu a:hover {
-  padding: 0.3em 0px 0.3em 10px;
-  border-left: 5px solid #65944a;
+#sidebar ul.sidemenu li img, #sidebar ul.sidemenu li a img, a #sidebar ul.sidemenu li img {
+  background: inherit;
+  border-width: 0px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  -moz-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+#sidebar ul.sidemenu li img:hover, #sidebar ul.sidemenu li a img:hover, a #sidebar ul.sidemenu li img:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 
 /* main */
 #main {
   float: left;
-  width: 70%;
+  width: 88%;
   margin: 0px 0px 10px 0px;
 }
 #main h1 {
