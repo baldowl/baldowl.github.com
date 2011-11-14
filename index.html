@@ -2,24 +2,6 @@
 layout: default
 title: Baldowl - my nest somewhere in GitHub's forest
 ---
-{% if paginator.previous_page %}
-  <div class="page-navigation align-right">
-    <span class="previous-page">
-      {% if paginator.previous_page > 1 %}
-        <a href="/page{{ paginator.previous_page }}">&laquo; Previous page</a>
-      {% else %}
-        <a href="/">&laquo; Previous page</a>
-      {% endif %}
-    </span>
-    {% if paginator.next_page %}
-      <span class="page-separator"></span>
-      <span class="next-page">
-        <a href="/page{{ paginator.next_page }}">Next page &raquo;</a>
-      </span>
-    {% endif %}
-  </div>
-{% endif %}
-
 {% for post in paginator.posts %}
 <article class="post">
   <header>
