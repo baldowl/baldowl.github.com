@@ -131,8 +131,9 @@ img.float-left, a img.float-left {
 }
 
 tt, code {
+  color: black;
   font-family: Monaco, monospace;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 abbr {
