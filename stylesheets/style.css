@@ -358,10 +358,4 @@ abbr {
 /* pagination */
 .page-navigation {
   clear: both;
-  padding-right: 20px;
-}
-
-.page-separator {
-  margin: 0px 10px;
-  border: 1px solid #65944a;
 }

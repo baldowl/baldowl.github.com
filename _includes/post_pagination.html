@@ -1,12 +1,11 @@
-<div class="page-navigation align-right">
+<div class="page-navigation">
   {% if page.next.url %}
-    <span class="next-page">
+    <span class="float-left">
       <a href="{{ page.next.url }}" title="Next Post: {{ page.next.title }}">&laquo; {{ page.next.title }}</a>
     </span>
   {% endif %}
-  {% if page.previous.url and page.next.url %}<span class="page-separator"></span>{% endif %}
   {% if page.previous.url %}
-    <span class="previous-page">
+    <span class="float-right">
       <a href="{{ page.previous.url }}" title="Previous Post: {{ page.previous.title }}">{{ page.previous.title }} &raquo;</a>
     </span>
   {% endif %}

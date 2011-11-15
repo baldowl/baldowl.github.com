@@ -20,9 +20,9 @@ title: Baldowl - my nest somewhere in GitHub's forest
 </article>
 {% endfor %}
 
-<div class="page-navigation align-right">
+<div class="page-navigation">
   {% if paginator.previous_page %}
-    <span class="previous-page">
+    <span class="float-left">
       {% if paginator.previous_page > 1 %}
         <a href="/page{{ paginator.previous_page }}">&laquo; Previous page</a>
       {% else %}
@@ -31,10 +31,7 @@ title: Baldowl - my nest somewhere in GitHub's forest
     </span>
   {% endif %}
   {% if paginator.next_page %}
-    {% if paginator.previous_page %}
-      <span class="page-separator"></span>
-    {% endif %}
-    <span class="next-page">
+    <span class="float-right">
       <a href="/page{{ paginator.next_page }}">Next page &raquo;</a>
     </span>
   {% endif %}
