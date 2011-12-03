@@ -16,6 +16,11 @@ namespace :archives do
 
       missing_archives = published_years - archived_years
       puts "Missing year archives: #{missing_archives.join(', ')}" unless missing_archives.empty?
+
+      year_list = File.read('_includes/year_list.html')
+      published_years.each do |year|
+        puts "Missing year reference: #{year}" if year_list.grep(Regexp.new(year.to_s)).empty?
+      end
     end
 
     desc "Build the YEAR archive"
