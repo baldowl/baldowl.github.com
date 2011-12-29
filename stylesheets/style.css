@@ -131,9 +131,17 @@ img.float-left, a img.float-left {
 }
 
 tt, code {
+  background-color: #f2f2f2;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
   color: black;
   font-family: Monaco, monospace;
   font-size: 13px;
+  padding: 1px 3px;
 }
 
 em {
@@ -274,7 +282,7 @@ abbr {
 }
 #main h1 {
   padding: 10px 0px 0px 5px;
-  margin: 0px 0px 0px 10px;
+  margin: 0px 10px 0px 10px;
   border-bottom: 1px solid #f2f2f2;
   font: normal 1.5em "Trebuchet MS", Tahoma, Sans-serif;
 }
