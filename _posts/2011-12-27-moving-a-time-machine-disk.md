@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Moving a Time Machine Disk
-tags:
-  - os x
+tag: os x
 ---
 Recently I had to upgrade to OS X _Lion_; given that I didn't want to lose all
 the backups performed since my first days in OS X's world, back in April 2008,
