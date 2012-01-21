@@ -112,11 +112,6 @@ p, h1, h2, h3 {
   margin: 10px 15px;
 }
 
-ul, ol {
-  margin: 10px 30px;
-  padding: 0px 15px;
-}
-
 /* images */
 img, a img {
   border: 1px solid #dadada;
@@ -239,11 +234,6 @@ abbr {
 }
 
 /* sidebar menu */
-#sidebar ul.sidemenu {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-}
 #sidebar ul.sidemenu li a {
   color: #333333;
   text-decoration: none;
@@ -285,6 +275,10 @@ abbr {
   margin: 0px 10px 0px 10px;
   border-bottom: 1px solid #f2f2f2;
   font: normal 1.5em "Trebuchet MS", Tahoma, Sans-serif;
+}
+#main ul, #main ol {
+  margin: 10px 30px;
+  padding: 0px 15px;
 }
 #main ul li {
   list-style-image: url('/images/bullet.gif');
