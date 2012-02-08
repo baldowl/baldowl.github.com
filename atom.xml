@@ -6,7 +6,7 @@ id_base: tag:baldowl.github.com,2005
   <id>{{ page.id_base }}:atom</id>
   <link rel="alternate" href="{{ site.base_url }}" type="text/html" />
   <link rel="self" href="{{ site.base_url }}/atom.xml" type="application/atom+xml" />
-  <title>Baldowl</title>
+  <title>Baldowl - my nest somewhere in GitHub's forest</title>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <author>
     <name>Emanuele Vicentini</name>
