@@ -1,10 +1,11 @@
 ---
 id_base: tag:baldowl.github.com,2005
+tracking: utm_source=feed&utm_medium=feed&utm_campaign=feed
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
   <id>{{ page.id_base }}:atom</id>
-  <link rel="alternate" href="{{ site.base_url }}" type="text/html" />
+  <link rel="alternate" href="{{ site.base_url }}?{{ page.tracking | cgi_escape }}" type="text/html" />
   <link rel="self" href="{{ site.base_url }}/atom.xml" type="application/atom+xml" />
   <title>Baldowl - my nest somewhere in GitHub's forest</title>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
@@ -15,11 +16,11 @@ id_base: tag:baldowl.github.com,2005
   <entry>
     <id>{{ page.id_base }}:{{ post.id }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
-    <link rel="alternate" href="{{ site.base_url }}{{ post.url }}" type="text/html" />
+    <link rel="alternate" href="{{ site.base_url }}{{ post.url }}?{{ page.tracking | cgi_escape }}" type="text/html" />
     <title>{{ post.title }}</title>
     <content type="html">
       &lt;p&gt;{{ post.content | strip_html | truncatewords: 50 | xml_escape }}&lt;/p&gt;
-      &lt;p&gt;&lt;a href=&quot;{{ site.base_url }}{{ post.url }}&quot;&gt;More...&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;{{ site.base_url }}{{ post.url }}?{{ page.tracking | cgi_escape }}&quot;&gt;More...&lt;/a&gt;&lt;/p&gt;
     </content>
   </entry>
   {% endfor %}
