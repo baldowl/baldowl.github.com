@@ -54,8 +54,53 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-.icons-sprite, .post footer .date, .post footer .tags, .post footer .comments {
-  background: url('/images/icons-sf9677ea4a1.png') no-repeat;
+.icons-sprite, .clock-icon, .comment-icon, .tag-icon {
+  background: url('/images/icons-sbc7af03898.png') no-repeat;
+}
+
+.clock-icon {
+  background-position: 0 0;
+  height: 12px;
+  width: 12px;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  padding: 2px;
+}
+.clock-icon {
+  *display: inline;
+}
+
+.comment-icon {
+  background-position: 0 -16px;
+  height: 11px;
+  width: 12px;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  padding: 2px;
+}
+.comment-icon {
+  *display: inline;
+}
+
+.tag-icon {
+  background-position: 0 -31px;
+  height: 12px;
+  width: 12px;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  padding: 2px;
+}
+.tag-icon {
+  *display: inline;
 }
 
 /*******************************************
@@ -127,11 +172,10 @@ img.float-left, a img.float-left {
 
 tt, code {
   background-color: #f2f2f2;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
+  -moz-border-radius: 3px;
   -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
   color: black;
   font-family: Monaco, monospace;
@@ -246,18 +290,11 @@ abbr {
   border-width: 0px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
-  -moz-transition-property: opacity;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-  -moz-transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  -moz-transition-timing-function: ease-in;
-  -webkit-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
+  -webkit-transition: opacity 0.4s ease-in;
+  -moz-transition: opacity 0.4s ease-in;
+  -ms-transition: opacity 0.4s ease-in;
+  -o-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
 }
 #sidebar ul.sidemenu li img:hover, #sidebar ul.sidemenu li a img:hover, a #sidebar ul.sidemenu li img:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -290,11 +327,10 @@ abbr {
 .post {
   background: white url('/images/gradientbg.jpg') repeat-x;
   border: 1px solid #efeded;
-  -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
+  -moz-border-radius: 6px;
   -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
+  -o-border-radius: 6px;
   border-radius: 6px;
   margin: 10px 0px;
 }
@@ -307,18 +343,7 @@ abbr {
 .post footer p {
   margin: 0px;
 }
-.post footer .date {
-  background-position: 0 0;
-  padding-left: 20px;
-  margin: 0px 10px 0px 5px;
-}
-.post footer .tags {
-  background-position: 0 -37px;
-  padding-left: 20px;
-  margin: 0px 10px 0px 5px;
-}
-.post footer .comments {
-  background-position: 0 -19px;
+.post footer p .blob {
   padding-left: 20px;
   margin: 0px 10px 0px 5px;
 }

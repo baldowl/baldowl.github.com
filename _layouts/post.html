@@ -10,8 +10,8 @@ layout: default
 
   <footer class="align-right clear">
     <p>
-      {% if page.tags != empty %}<span class="tags">{% for tag in page.tags %}<a href="/archives/tags/{{ tag | xml_escape }}">{{ tag }}</a>{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}</span>{% endif %}
-      <time datetime="{{ page.date | date: '%F' }}" pubdate><span class="date">{{ page.date | date: '%b %d, %Y' }}</span></time>
+      {% if page.tags != empty %}<span class="blob"><i class="tag-icon"></i>{% for tag in page.tags %}<a href="/archives/tags/{{ tag | xml_escape }}">{{ tag }}</a>{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}</span>{% endif %}
+      <time datetime="{{ page.date | date: '%F' }}" pubdate><span class="blob"><i class="clock-icon"></i>{{ page.date | date: '%b %d, %Y' }}</span></time>
     </p>
   </footer>
 
