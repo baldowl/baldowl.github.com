@@ -7,7 +7,7 @@ tracking: utm_source=feed&utm_medium=feed&utm_campaign=feed
   <id>{{ page.id_base }}:atom</id>
   <link rel="alternate" href="{{ site.base_url }}?{{ page.tracking | cgi_escape }}" type="text/html" />
   <link rel="self" href="{{ site.base_url }}/atom.xml" type="application/atom+xml" />
-  <title>Baldowl - my nest somewhere in GitHub's forest</title>
+  <title>{{ site.title }}</title>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <author>
     <name>Emanuele Vicentini</name>

@@ -9,5 +9,6 @@ exclude:
   - sass
 
 base_url: http://baldowl.github.com
+title: Baldowl - my nest somewhere in GitHub's forest
 
 disqus_shortname: baldowl
