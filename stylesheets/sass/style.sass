@@ -18,6 +18,16 @@ $icons-sprite-dimensions: true
     @include inline-block
     padding: 2px
 
+@each $image in github, rss
+  .#{$image}-sidebar
+    @include icons-sprite($image)
+    @include inline-block
+    @include opacity(0.6)
+    @include single-transition(opacity, 0.4s, ease-in)
+    margin: 10px 0px
+    &:hover
+      @include opaque
+
 $main_width: 88%
 $gutter: 2%
 $sidebar_width: 100% - $main_width - $gutter
@@ -184,13 +194,6 @@ abbr
       a
         @include link-colors(#333, #65944A)
         text-decoration: none
-      img
-        background: inherit
-        border-width: 0px
-        @include opacity(0.6)
-        @include single-transition(opacity, 0.4s, ease-in)
-        &:hover
-          @include opaque
 
 /* main
 

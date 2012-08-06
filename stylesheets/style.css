@@ -14,12 +14,12 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
+  font-size: 100%;
   vertical-align: baseline;
 }
 
-body {
+html {
   line-height: 1;
 }
 
@@ -54,53 +54,93 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-.icons-sprite, .clock-icon, .comment-icon, .tag-icon {
-  background: url('/images/icons-sbc7af03898.png') no-repeat;
+.icons-sprite, .clock-icon, .comment-icon, .tag-icon, .github-sidebar, .rss-sidebar {
+  background: url('/images/icons-s75a0e3a353.png') no-repeat;
 }
 
 .clock-icon {
-  background-position: 0 0;
+  background-position: 0 -72px;
   height: 12px;
   width: 12px;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  padding: 2px;
-}
-.clock-icon {
+  zoom: 1;
   *display: inline;
+  padding: 2px;
 }
 
 .comment-icon {
-  background-position: 0 -16px;
+  background-position: 0 -88px;
   height: 11px;
   width: 12px;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  padding: 2px;
-}
-.comment-icon {
+  zoom: 1;
   *display: inline;
+  padding: 2px;
 }
 
 .tag-icon {
-  background-position: 0 -31px;
+  background-position: 0 -103px;
   height: 12px;
   width: 12px;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   padding: 2px;
 }
-.tag-icon {
+
+.github-sidebar {
+  background-position: 0 0;
+  height: 32px;
+  width: 32px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
   *display: inline;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  -webkit-transition: opacity 0.4s ease-in;
+  -moz-transition: opacity 0.4s ease-in;
+  -o-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
+  margin: 10px 0px;
+}
+.github-sidebar:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.rss-sidebar {
+  background-position: 0 -36px;
+  height: 32px;
+  width: 32px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  -webkit-transition: opacity 0.4s ease-in;
+  -moz-transition: opacity 0.4s ease-in;
+  -o-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
+  margin: 10px 0px;
+}
+.rss-sidebar:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 
 /*******************************************
@@ -289,21 +329,6 @@ abbr {
 }
 #sidebar ul.sidemenu li a:hover {
   color: #65944a;
-}
-#sidebar ul.sidemenu li img, #sidebar ul.sidemenu li a img, a #sidebar ul.sidemenu li img {
-  background: inherit;
-  border-width: 0px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  opacity: 0.6;
-  -webkit-transition: opacity 0.4s ease-in;
-  -moz-transition: opacity 0.4s ease-in;
-  -ms-transition: opacity 0.4s ease-in;
-  -o-transition: opacity 0.4s ease-in;
-  transition: opacity 0.4s ease-in;
-}
-#sidebar ul.sidemenu li img:hover, #sidebar ul.sidemenu li a img:hover, a #sidebar ul.sidemenu li img:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
 }
 
 /* main */
