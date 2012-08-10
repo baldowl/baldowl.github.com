@@ -3,7 +3,7 @@
     {% if post.single_post != true %}<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>{% else %}<h1>{{ post.title }}</h1>{% endif %}
   </header>
 
-  {{ content }}
+  {% if post.single_post %}{{ content }}{% else %}{{ post.content }}{% endif %}
 
   <footer class="align-right clear">
     <p>
