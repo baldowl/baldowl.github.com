@@ -5,6 +5,7 @@ paginate: 6
 markdown: kramdown
 exclude:
   - config.rb
+  - icons
   - Rakefile
   - sass
 
