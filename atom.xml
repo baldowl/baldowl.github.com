@@ -17,7 +17,7 @@ tracking: utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=feed
     <id>{{ page.id_base }}:{{ post.id }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <link rel="alternate" href="{{ site.base_url }}{{ post.url }}?{{ page.tracking }}" type="text/html" />
-    <title>{{ post.title }}</title>
+    <title>{{ post.title | xml_escape }}</title>
     <content type="html">
       &lt;p&gt;{{ post.content | strip_html | truncatewords: 50 | xml_escape }}&lt;/p&gt;
       &lt;p&gt;&lt;a href=&quot;{{ site.base_url }}{{ post.url }}?{{ page.tracking }}&quot;&gt;More...&lt;/a&gt;&lt;/p&gt;
