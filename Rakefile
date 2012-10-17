@@ -89,7 +89,7 @@ def gathered_data
   $stdout.reopen('/dev/null')
   $stdout.sync = true
   @site ||= Jekyll::Site.new(Jekyll.configuration({}))
-  @site.read_posts ''
+  @site.read_directories
   $stdout.reopen old_stdout
   @site
 end
