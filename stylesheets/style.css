@@ -46,7 +46,7 @@ q:before, q:after, blockquote:before, blockquote:after {
   content: none;
 }
 
-a img, a img {
+a img {
   border: none;
 }
 
@@ -203,13 +203,13 @@ img, a img {
   padding: 5px;
   background: #fafafa;
 }
-img.float-right, a img.float-right {
+img.float-right {
   margin: 5px 0px 5px 15px;
 }
-img.float-left, a img.float-left {
+img.float-left {
   margin: 5px 15px 5px 0px;
 }
-img.centered, a img.centered {
+img.centered {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -426,4 +426,26 @@ abbr {
 /* pagination */
 .page-navigation {
   clear: both;
+}
+
+/* tables */
+table {
+  border-collapse: collapse;
+  margin: 10px 15px;
+}
+table.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+table tr {
+  height: 30px;
+}
+table th, table td {
+  border: 2px solid white;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+table th {
+  background: #65944a;
+  color: white;
 }
