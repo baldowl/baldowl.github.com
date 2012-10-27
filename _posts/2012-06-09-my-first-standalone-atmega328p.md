@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My First Standalone ATmega328p
+tag: arduino
 ---
 Writing small sketches and playing around with Arduino is funny, but I was
 curious about reducing the component numbers, the board size and skipping the

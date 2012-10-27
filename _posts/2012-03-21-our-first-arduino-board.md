@@ -1,5 +1,6 @@
 ---
 layout: post
+tag: arduino
 ---
 It arrived yesterday morning...
 
