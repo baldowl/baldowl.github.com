@@ -1,7 +1,7 @@
 auto: true
 server: true
 server_port: 3000
-paginate: 6
+paginate: 7
 markdown: kramdown
 exclude:
   - config.rb
