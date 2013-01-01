@@ -1,0 +1,117 @@
+// Layout
+
+// header
+
+#header-content
+  height: 100px
+  position: relative
+
+h1#logo
+  position: absolute
+  font: bold 45px $main_font_list
+  letter-spacing: -2px
+  color: $logo_color
+  margin: 0px
+  // change the values of left and top to adjust the position of the logo
+  top: 0px
+  left: 0px
+  a
+    color: $logo_color
+    &:hover
+      text-decoration: none
+
+#slogan
+  position: absolute
+  font: bold 12px $main_font_list
+  text-transform: none
+  color: $slogan_color
+  margin: 0px
+  // change the values of left and top to adjust the position of the slogan
+  top: 55px
+  left: 40px
+
+// header photo
+
+#headerphoto
+  margin-left: auto
+  margin-right: auto
+  width: container-outer-width()
+  height: 200px
+  padding: 15px 15px 10px 15px
+  background: white image-url('headerphoto.jpg') no-repeat center
+
+// sidebar
+
+#sidebar
+  margin-top: 10px
+  margin-bottom: 10px
+
+.sidebox
+  margin-bottom: 10px
+  text-align: center
+  h1
+    padding: 10px 0px 5px 0px
+    margin: 0px
+    font: bold 1.3em $main_font_list
+
+// sidebar menu
+
+ul.sidemenu
+  a
+    @include link-colors($sidebar_link_color, $sidebar_link_hover_color)
+    text-decoration: none
+
+// main
+
+#main
+  h1
+    padding: 10px 0px 0px 5px
+    margin: 0px 10px 0px 10px
+    border-bottom: 1px solid $header_border_color
+    font: normal 1.5em $main_font_list
+  ul, ol
+    margin: 10px 30px
+    padding: 0px 15px
+  ul
+    list-style-image: image-url('bullet.gif')
+  ol
+    list-style-type: decimal
+
+.post
+  background: white image-url('gradientbg.jpg') repeat-x
+  border: 1px solid $post_border_color
+  @include border-radius
+  margin: 10px 0px
+  footer
+    background-color: $post_footer_background_color
+    border: 1px solid $post_footer_border_color
+    clear: both
+    padding: 5px
+    margin-top: 20px
+    text-align: right
+    p
+      margin: 0px
+      .blob
+        padding-left: 20px
+        margin: 0px 10px 0px 5px
+
+#disqus_thread
+  ul
+    @include reset-list-style
+
+// navigation
+
+.page-navigation
+  .newer
+    float: left
+  .older
+    float: right
+
+// footer
+
+#footer-content
+  border-top: 1px solid $footer_border_color
+  font: normal 0.95em / 1.6em $main_font_list
+  text-align: right
+  a
+    @include link-colors($footer_link_color, $footer_link_hover_color)

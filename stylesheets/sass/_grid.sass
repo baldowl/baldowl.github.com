@@ -1,0 +1,22 @@
+// Grid
+
+@import susy
+
+$total-columns: 9
+$column-width: 80px
+$gutter-width: 10px
+$grid-padding: 0px
+
+$container-style: static
+
+$sidebar-columns: 1
+$main-columns: $total-columns - $sidebar-columns
+
+#header-content, #content, #footer-content
+  @include container
+
+#sidebar
+  @include span-columns($sidebar-columns omega, $total-columns)
+
+#main
+  @include span-columns($main-columns, $total-columns)

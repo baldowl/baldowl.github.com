@@ -23,52 +23,38 @@
 </head>
 
 <body>
-  <!-- wrap starts here -->
-  <div id="wrap">
-    <header>
-      <div id="header">
-        <hgroup id="header-content">
-          <h1 id="logo"><a href="/">Bald<span class="gray">owl</span></a></h1>
-          <h2 id="slogan">my nest somewhere in GitHub's forest</h2>
-        </hgroup>
-      </div>
+  <header>
+    <hgroup id="header-content">
+      <h1 id="logo"><a href="/">Bald<span class="gray">owl</span></a></h1>
+      <h2 id="slogan">my nest somewhere in GitHub's forest</h2>
+    </hgroup>
 
-      <div class="headerphoto"></div>
-    </header>
+    <div id="headerphoto"></div>
+  </header>
 
-    <!-- content-wrap starts here -->
-    <div id="content-wrap">
-      <div id="content">
-        <aside id="sidebar">
-          <section class="sidebox">
-            <ul class="sidemenu">
-              <li><a href="https://github.com/baldowl" title="My GitHub's profile"><i class="github-sidebar"></i></a></li>
-              <li><a href="/atom.xml" title="The Atom feed"><i class="rss-sidebar"></i></a></li>
-              <li><a href="http://www.shopify.com" title="Shopify, the only ecommerce solution you'll ever need"><i class="shopify-sidebar"></i></a></li>
-            </ul>
-          </section>
-          {% include year_list.html %}
-        </aside>
+  <div id="content">
+    <aside id="sidebar">
+      <section class="sidebox">
+        <ul class="sidemenu">
+          <li><a href="https://github.com/baldowl" title="My GitHub's profile"><i class="github-sidebar"></i></a></li>
+          <li><a href="/atom.xml" title="The Atom feed"><i class="rss-sidebar"></i></a></li>
+          <li><a href="http://www.shopify.com" title="Shopify, the only ecommerce solution you'll ever need"><i class="shopify-sidebar"></i></a></li>
+        </ul>
+      </section>
+      {% include year_list.html %}
+    </aside>
 
-        <section id="main">
-          {{ content }}
-        </section>
-      <!-- content-wrap ends here -->
-      </div>
-    </div>
-
-    <!-- footer starts here -->
-    <footer id="footer">
-      <div id="footer-content">
-        <div class="float-right">
-          <p>Original design by <a href="http://www.styleshout.com/">styleshout</a>;
-          some icons from the <a href="http://somerandomdude.com/projects/iconic/">Iconic pack</a>.</p>
-        </div>
-      </div>
-    <!-- footer ends here -->
-    </footer>
-  <!-- wrap ends here -->
+    <section id="main">
+      {{ content }}
+    </section>
   </div>
+
+  <footer>
+    <div id="footer-content">
+      <p>Original design by <a href="http://www.styleshout.com/">styleshout</a>;
+      some icons from the <a href="http://somerandomdude.com/projects/iconic/">Iconic pack</a>.</p>
+    </div>
+  </footer>
 </body>
 
 </html>

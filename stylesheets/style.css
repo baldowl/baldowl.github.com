@@ -58,10 +58,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background: url('/images/icons-sb2c1b41d4a.png') no-repeat;
 }
 
-.clock-icon {
-  background-position: 0 -108px;
-  height: 12px;
-  width: 12px;
+.clock-icon, .comment-icon, .tag-icon {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -69,137 +66,230 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   zoom: 1;
   *display: inline;
   padding: 2px;
+}
+
+.clock-icon {
+  background-position: 0 -108px;
+  height: 12px;
+  width: 12px;
 }
 
 .comment-icon {
   background-position: 0 -124px;
   height: 11px;
   width: 12px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  padding: 2px;
 }
 
 .tag-icon {
   background-position: 0 -139px;
   height: 12px;
   width: 12px;
+}
+
+.github-sidebar, .rss-sidebar, .shopify-sidebar {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  padding: 2px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  -webkit-transition: opacity 0.4s ease-in;
+  -moz-transition: opacity 0.4s ease-in;
+  -o-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
+  margin: 10px 0px;
+}
+.github-sidebar:hover, .rss-sidebar:hover, .shopify-sidebar:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 
 .github-sidebar {
   background-position: 0 -36px;
   height: 32px;
   width: 32px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  opacity: 0.6;
-  -webkit-transition: opacity 0.4s ease-in;
-  -moz-transition: opacity 0.4s ease-in;
-  -o-transition: opacity 0.4s ease-in;
-  transition: opacity 0.4s ease-in;
-  margin: 10px 0px;
-}
-.github-sidebar:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
 }
 
 .rss-sidebar {
   background-position: 0 -72px;
   height: 32px;
   width: 32px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  opacity: 0.6;
-  -webkit-transition: opacity 0.4s ease-in;
-  -moz-transition: opacity 0.4s ease-in;
-  -o-transition: opacity 0.4s ease-in;
-  transition: opacity 0.4s ease-in;
-  margin: 10px 0px;
-}
-.rss-sidebar:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
 }
 
 .shopify-sidebar {
   background-position: 0 0;
   height: 32px;
   width: 32px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  opacity: 0.6;
-  -webkit-transition: opacity 0.4s ease-in;
-  -moz-transition: opacity 0.4s ease-in;
-  -o-transition: opacity 0.4s ease-in;
-  transition: opacity 0.4s ease-in;
-  margin: 10px 0px;
-}
-.shopify-sidebar:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
 }
 
-/*******************************************
- *AUTHOR:        Erwin Aligam
- *WEBSITE:       http://www.styleshout.com/
- *TEMPLATE NAME: PixelGreen
- *TEMPLATE CODE: S-0010
- *VERSION:       1.2
- *LAST MODIFIED: June-05-2007
- ****************************************** */
-/*******************************************
- *   HTML ELEMENTS
- ******************************************** */
-/* top elements */
+#header-content, #content, #footer-content {
+  *zoom: 1;
+  width: 800px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#header-content:after, #content:after, #footer-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#sidebar {
+  width: 10%;
+  float: right;
+  margin-right: 0;
+  #margin-left: -10px;
+  display: inline;
+}
+
+#main {
+  width: 88.75%;
+  float: left;
+  margin-right: 1.25%;
+  display: inline;
+}
+
+#header-content {
+  height: 100px;
+  position: relative;
+}
+
+h1#logo {
+  position: absolute;
+  font: bold 45px "Trebuchet MS", Tahoma, sans-serif;
+  letter-spacing: -2px;
+  color: white;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+}
+h1#logo a {
+  color: white;
+}
+h1#logo a:hover {
+  text-decoration: none;
+}
+
+#slogan {
+  position: absolute;
+  font: bold 12px "Trebuchet MS", Tahoma, sans-serif;
+  text-transform: none;
+  color: white;
+  margin: 0px;
+  top: 55px;
+  left: 40px;
+}
+
+#headerphoto {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  height: 200px;
+  padding: 15px 15px 10px 15px;
+  background: white url('/images/headerphoto.jpg') no-repeat center;
+}
+
+#sidebar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebox {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.sidebox h1 {
+  padding: 10px 0px 5px 0px;
+  margin: 0px;
+  font: bold 1.3em "Trebuchet MS", Tahoma, sans-serif;
+}
+
+ul.sidemenu a {
+  color: #333333;
+  text-decoration: none;
+}
+ul.sidemenu a:hover {
+  color: #65944a;
+}
+
+#main h1 {
+  padding: 10px 0px 0px 5px;
+  margin: 0px 10px 0px 10px;
+  border-bottom: 1px solid #f2f2f2;
+  font: normal 1.5em "Trebuchet MS", Tahoma, sans-serif;
+}
+#main ul, #main ol {
+  margin: 10px 30px;
+  padding: 0px 15px;
+}
+#main ul {
+  list-style-image: url('/images/bullet.gif');
+}
+#main ol {
+  list-style-type: decimal;
+}
+
+.post {
+  background: white url('/images/gradientbg.jpg') repeat-x;
+  border: 1px solid #efeded;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  margin: 10px 0px;
+}
+.post footer {
+  background-color: #fafafa;
+  border: 1px solid #f2f2f2;
+  clear: both;
+  padding: 5px;
+  margin-top: 20px;
+  text-align: right;
+}
+.post footer p {
+  margin: 0px;
+}
+.post footer p .blob {
+  padding-left: 20px;
+  margin: 0px 10px 0px 5px;
+}
+
+#disqus_thread ul {
+  list-style: none;
+}
+
+.page-navigation .newer {
+  float: left;
+}
+.page-navigation .older {
+  float: right;
+}
+
+#footer-content {
+  border-top: 1px solid #eaeaea;
+  font: normal 0.95em/1.6em "Trebuchet MS", Tahoma, sans-serif;
+  text-align: right;
+}
+#footer-content a {
+  color: #777777;
+}
+#footer-content a:hover {
+  color: #333333;
+}
+
 body {
   font: normal 85%/1.5em "Trebuchet MS", Tahoma, sans-serif;
   color: #555555;
   background: white url('/images/bg.jpg') repeat-x;
-  text-align: center;
 }
 
-/* links */
-a {
-  text-decoration: none;
-  color: #72a545;
-}
-a:hover {
-  text-decoration: underline;
-}
-a:hover {
-  color: #006699;
-}
-
-/* headers */
 h1, h2, h3 {
-  font: bold 1em "Trebuchet MS", Tahoma, Sans-serif;
+  font: bold 1em "Trebuchet MS", Tahoma, sans-serif;
 }
 
 h1 {
@@ -220,7 +310,17 @@ p, h1, h2, h3 {
   margin: 10px 15px;
 }
 
-/* images */
+a {
+  text-decoration: none;
+  color: #72a545;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:hover {
+  color: #006699;
+}
+
 img, a img {
   border: 1px solid #dadada;
   padding: 5px;
@@ -264,163 +364,6 @@ abbr {
   border-bottom: 1px solid #777777;
 }
 
-/**********************
- *    LAYOUT
- ************************ */
-#header-content, #content, #footer-content {
-  width: 800px;
-}
-
-/* header */
-#header {
-  height: 100px;
-  text-align: left;
-}
-
-#header-content {
-  margin: 0px auto;
-  position: relative;
-}
-#header-content h1#logo {
-  position: absolute;
-  font: bold 45px "Trebuchet MS", Sans-serif;
-  letter-spacing: -2px;
-  color: white;
-  margin: 0px;
-  /* change the values of left and top to adjust the position of the logo */
-  top: 0px;
-  left: 0px;
-}
-#header-content h1#logo a {
-  color: white;
-}
-#header-content h1#logo a:hover {
-  text-decoration: none;
-}
-#header-content #slogan {
-  position: absolute;
-  font: bold 12px "Trebuchet Ms", Sans-serif;
-  text-transform: none;
-  color: white;
-  margin: 0px;
-  /* change the values of left and top to adjust the position of the slogan */
-  top: 55px;
-  left: 40px;
-}
-
-/* header photo */
-.headerphoto {
-  margin: 0px auto;
-  width: 810px;
-  height: 200px;
-  padding: 15px 10px 10px 10px;
-  background: white url('/images/headerphoto.jpg') no-repeat center;
-}
-
-/* content */
-#content-wrap {
-  clear: both;
-  float: left;
-  width: 100%;
-}
-
-#content {
-  text-align: left;
-  margin: 0px auto;
-}
-
-/* sidebar */
-#sidebar {
-  float: right;
-  width: 10%;
-  margin: 10px 0px;
-}
-#sidebar .sidebox {
-  margin-bottom: 10px;
-  text-align: center;
-}
-#sidebar .sidebox h1 {
-  padding: 10px 0px 5px 0px;
-  margin: 0px;
-  font: bold 1.3em "Trebuchet MS", Tahoma, Sans-serif;
-}
-
-/* sidebar menu */
-#sidebar ul.sidemenu li a {
-  color: #333333;
-  text-decoration: none;
-}
-#sidebar ul.sidemenu li a:hover {
-  color: #65944a;
-}
-
-/* main */
-#main {
-  float: left;
-  width: 88%;
-  margin: 0px 0px 10px 0px;
-}
-#main h1 {
-  padding: 10px 0px 0px 5px;
-  margin: 0px 10px 0px 10px;
-  border-bottom: 1px solid #f2f2f2;
-  font: normal 1.5em "Trebuchet MS", Tahoma, Sans-serif;
-}
-#main ul, #main ol {
-  margin: 10px 30px;
-  padding: 0px 15px;
-}
-#main ul li {
-  list-style-image: url('/images/bullet.gif');
-}
-#main ol li {
-  list-style-type: decimal;
-}
-
-.post {
-  background: white url('/images/gradientbg.jpg') repeat-x;
-  border: 1px solid #efeded;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-  margin: 10px 0px;
-}
-.post footer {
-  background-color: #fafafa;
-  border: 1px solid #f2f2f2;
-  padding: 5px;
-  margin-top: 20px;
-}
-.post footer p {
-  margin: 0px;
-}
-.post footer p .blob {
-  padding-left: 20px;
-  margin: 0px 10px 0px 5px;
-}
-
-/* footer */
-#footer {
-  clear: both;
-  font: normal 0.95em/1.6em "Trebuchet MS", Tahoma, Arial, sans-serif;
-  text-align: left;
-}
-
-#footer-content {
-  border-top: 1px solid #eaeaea;
-  margin: 0px auto;
-  padding-left: 15px;
-}
-#footer-content a {
-  color: #777777;
-}
-#footer-content a:hover {
-  color: #333333;
-}
-
-/* alignment classes */
 .float-left {
   float: left;
 }
@@ -429,32 +372,37 @@ abbr {
   float: right;
 }
 
-.align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
-}
-
-/* additional classes */
-.clear {
-  clear: both;
-}
-
 .gray {
   color: #bfbfbf;
 }
 
-/* pagination */
-.page-navigation {
-  clear: both;
-}
-
-/* tables */
 table {
   border-collapse: collapse;
   margin: 10px 15px;
+}
+table th {
+  background-color: #65944a;
+}
+table th.even, table th:nth-child(2n) {
+  background-color: #58873d;
+}
+table tr.odd td, table tr:nth-child(2n+1) td {
+  background-color: #f2f2f2;
+}
+table tr.odd td.even, table tr.odd td:nth-child(2n), table tr:nth-child(2n+1) td.even, table tr:nth-child(2n+1) td:nth-child(2n) {
+  background-color: #e5e5e5;
+}
+table tr.even td {
+  background-color: white;
+}
+table tr.even td.even, table tr.even td:nth-child(2n) {
+  background-color: #f2f2f2;
+}
+table tfoot th, table tfoot td {
+  background-color: white;
+}
+table tfoot th.even, table tfoot th:nth-child(2n), table tfoot td.even, table tfoot td:nth-child(2n) {
+  background-color: #f2f2f2;
 }
 table.centered {
   margin-left: auto;
@@ -469,6 +417,5 @@ table th, table td {
   padding-right: 11px;
 }
 table th {
-  background: #65944a;
   color: white;
 }

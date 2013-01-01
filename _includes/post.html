@@ -5,7 +5,7 @@
 
   {% if post.single_post %}{{ content }}{% else %}{{ post.content }}{% endif %}
 
-  <footer class="align-right clear">
+  <footer>
     <p>
       {% if post.tags != empty %}<span class="blob"><i class="tag-icon"></i>{% for tag in post.tags %}<a href="/archives/tags/{{ tag | xml_escape }}">{{ tag }}</a>{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}</span>{% endif %}
       {% if post.single_post != true and post.comments != false %}<span class="blob"><i class="comment-icon"></i><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}"></a></span>{% endif %}

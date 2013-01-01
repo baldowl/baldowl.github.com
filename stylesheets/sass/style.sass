@@ -1,74 +1,33 @@
-@import compass/reset
+// Based on the following work:
+//
+// AUTHOR:        Erwin Aligam
+// WEBSITE:       http://www.styleshout.com/
+// TEMPLATE NAME: PixelGreen
+// TEMPLATE CODE: S-0010
+// VERSION:       1.2
+// LAST MODIFIED: June-05-2007
 
-$default-border-radius: 6px
-@import compass/css3/border-radius
-@import compass/css3/inline-block
-@import compass/css3/opacity
-@import compass/css3/transition
-@import compass/typography/links/hover-link
-@import compass/typography/links/link-colors
+@import base
+@import colors
+@import sprites
+@import grid
+@import layout
 
-$icons-spacing: 4px
-$icons-sprite-dimensions: true
-@import 'icons/*.png'
-
-@each $image in clock, comment, tag
-  .#{$image}-icon
-    @include icons-sprite($image)
-    @include inline-block
-    padding: 2px
-
-@each $image in github, rss, shopify
-  .#{$image}-sidebar
-    @include icons-sprite($image)
-    @include inline-block
-    @include opacity(0.6)
-    @include single-transition(opacity, 0.4s, ease-in)
-    margin: 10px 0px
-    &:hover
-      @include opaque
-
-$main_width: 88%
-$gutter: 2%
-$sidebar_width: 100% - $main_width - $gutter
-
-/********************************************
- *AUTHOR:        Erwin Aligam
- *WEBSITE:       http://www.styleshout.com/
- *TEMPLATE NAME: PixelGreen
- *TEMPLATE CODE: S-0010
- *VERSION:       1.2
- *LAST MODIFIED: June-05-2007
- ******************************************
-
-/********************************************
- *   HTML ELEMENTS
- ********************************************
-
-/* top elements
+// top elements
 
 body
-  font: normal 85% / 1.5em "Trebuchet MS", Tahoma, sans-serif
-  color: #555
-  background: white image-url('bg.jpg') repeat-x
-  text-align: center
+  font: normal 85% / 1.5em $main_font_list
+  color: $text_color
+  background: $background_color image-url('bg.jpg') repeat-x
 
-/* links
-
-a
-  @include hover-link
-  @include link-colors(#72A545, #006699)
-  img
-    @extend img
-
-/* headers
+// headers
 
 h1, h2, h3
-  font: bold 1em 'Trebuchet MS', Tahoma, Sans-serif
+  font: bold 1em $main_font_list
 
 h1
   font-size: 1.4em
-  color: #65944A
+  color: $header_color
 
 h2
   font-size: 1.2em
@@ -80,12 +39,20 @@ h3
 p, h1, h2, h3
   margin: 10px 15px
 
-/* images
+// links
+
+a
+  @include hover-link
+  @include link-colors($link_color, $link_hover_color)
+  img
+    @extend img
+
+// images
 
 img
-  border: 1px solid #DADADA
+  border: 1px solid $image_border_color
   padding: 5px
-  background: #FAFAFA
+  background: $image_background_color
   &.float-right
     margin: 5px 0px 5px 15px
   &.float-left
@@ -96,7 +63,7 @@ img
     margin-right: auto
 
 tt, code
-  background-color: #F2F2F2
+  background-color: $code_background_color
   @include border-radius(3px)
   color: #000000
   font-family: Monaco, monospace
@@ -111,142 +78,9 @@ strong
 
 abbr
   cursor: help
-  border-bottom: 1px solid #777
+  border-bottom: 1px solid $abbr_border_color
 
-/***********************
- *    LAYOUT
- ************************
-
-#header-content, #content, #footer-content
-  width: 800px
-
-/* header
-
-#header
-  height: 100px
-  text-align: left
-
-#header-content
-  margin: 0px auto
-  position: relative
-  h1#logo
-    position: absolute
-    font: bold 45px 'Trebuchet MS', Sans-serif
-    letter-spacing: -2px
-    color: #FFF
-    margin: 0px
-    /* change the values of left and top to adjust the position of the logo
-    top: 0px
-    left: 0px
-    a
-      color: #FFF
-      &:hover
-        text-decoration: none
-  #slogan
-    position: absolute
-    font: bold 12px 'Trebuchet Ms', Sans-serif
-    text-transform: none
-    color: #FFF
-    margin: 0px
-    /* change the values of left and top to adjust the position of the slogan
-    top: 55px
-    left: 40px
-
-/* header photo
-
-.headerphoto
-  margin: 0px auto
-  width: 810px
-  height: 200px
-  padding: 15px 10px 10px 10px
-  background: white image-url('headerphoto.jpg') no-repeat center
-
-/* content
-
-#content-wrap
-  clear: both
-  float: left
-  width: 100%
-
-#content
-  text-align: left
-  margin: 0px auto
-
-/* sidebar
-
-#sidebar
-  float: right
-  width: $sidebar_width
-  margin: 10px 0px
-  .sidebox
-    margin-bottom: 10px
-    text-align: center
-    h1
-      padding: 10px 0px 5px 0px
-      margin: 0px
-      font: bold 1.3em 'Trebuchet MS', Tahoma, Sans-serif
-
-/* sidebar menu
-
-#sidebar
-  ul.sidemenu
-    li
-      a
-        @include link-colors(#333, #65944A)
-        text-decoration: none
-
-/* main
-
-#main
-  float: left
-  width: $main_width
-  margin: 0px 0px 10px 0px
-  h1
-    padding: 10px 0px 0px 5px
-    margin: 0px 10px 0px 10px
-    border-bottom: 1px solid #f2f2f2
-    font: normal 1.5em 'Trebuchet MS', Tahoma, Sans-serif
-  ul, ol
-    margin: 10px 30px
-    padding: 0px 15px
-  ul
-    li
-      list-style-image: image-url('bullet.gif')
-  ol
-    li
-      list-style-type: decimal
-
-.post
-  background: white image-url('gradientbg.jpg') repeat-x
-  border: 1px solid #EFEDED
-  @include border-radius
-  margin: 10px 0px
-  footer
-    background-color: #FAFAFA
-    border: 1px solid #f2f2f2
-    padding: 5px
-    margin-top: 20px
-    p
-      margin: 0px
-      .blob
-        padding-left: 20px
-        margin: 0px 10px 0px 5px
-
-/* footer
-
-#footer
-  clear: both
-  font: normal 0.95em / 1.6em "Trebuchet MS", Tahoma, Arial, sans-serif
-  text-align: left
-
-#footer-content
-  border-top: 1px solid #EAEAEA
-  margin: 0px auto
-  padding-left: 15px
-  a
-    @include link-colors(#777, #333)
-
-/* alignment classes
+// alignment classes
 
 .float-left
   float: left
@@ -254,28 +88,15 @@ abbr
 .float-right
   float: right
 
-.align-left
-  text-align: left
-
-.align-right
-  text-align: right
-
-/* additional classes
-
-.clear
-  clear: both
+// additional classes
 
 .gray
   color: #BFBFBF
 
-/* pagination
-
-.page-navigation
-  clear: both
-
-/* tables
+// tables
 
 table
+  @include alternating-rows-and-columns($background_color, darken($background_color, 5%), darken(white, 95%), $table_header_background_color)
   border-collapse: collapse
   margin: 10px 15px
   &.centered
@@ -284,9 +105,8 @@ table
   tr
     height: 30px
   th, td
-    border: 2px solid #FFFFFF
+    border: 2px solid $table_border_color
     padding-left: 11px
     padding-right: 11px
   th
-    background: #65944A
-    color: #FFFFFF
+    color: $table_header_color
