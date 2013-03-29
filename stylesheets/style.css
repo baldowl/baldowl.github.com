@@ -139,17 +139,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #sidebar {
-  width: 10%;
+  width: 80px;
   float: right;
   margin-right: 0;
-  #margin-left: -10px;
+  *margin-left: -10px;
   display: inline;
 }
 
 #main {
-  width: 88.75%;
+  width: 710px;
   float: left;
-  margin-right: 1.25%;
+  margin-right: 10px;
   display: inline;
 }
 
@@ -376,46 +376,46 @@ abbr {
   color: #bfbfbf;
 }
 
-table {
+.post > table {
   border-collapse: collapse;
   margin: 10px 15px;
 }
-table th {
+.post > table th {
   background-color: #65944a;
 }
-table th.even, table th:nth-child(2n) {
+.post > table th.even, .post > table th:nth-child(2n) {
   background-color: #58873d;
 }
-table tr.odd td, table tr:nth-child(2n+1) td {
+.post > table tr.odd td, .post > table tr:nth-child(2n+1) td {
   background-color: #f2f2f2;
 }
-table tr.odd td.even, table tr.odd td:nth-child(2n), table tr:nth-child(2n+1) td.even, table tr:nth-child(2n+1) td:nth-child(2n) {
+.post > table tr.odd td.even, .post > table tr.odd td:nth-child(2n), .post > table tr:nth-child(2n+1) td.even, .post > table tr:nth-child(2n+1) td:nth-child(2n) {
   background-color: #e5e5e5;
 }
-table tr.even td {
+.post > table tr.even td {
   background-color: white;
 }
-table tr.even td.even, table tr.even td:nth-child(2n) {
+.post > table tr.even td.even, .post > table tr.even td:nth-child(2n) {
   background-color: #f2f2f2;
 }
-table tfoot th, table tfoot td {
+.post > table tfoot th, .post > table tfoot td {
   background-color: white;
 }
-table tfoot th.even, table tfoot th:nth-child(2n), table tfoot td.even, table tfoot td:nth-child(2n) {
+.post > table tfoot th.even, .post > table tfoot th:nth-child(2n), .post > table tfoot td.even, .post > table tfoot td:nth-child(2n) {
   background-color: #f2f2f2;
 }
-table.centered {
+.post > table.centered {
   margin-left: auto;
   margin-right: auto;
 }
-table tr {
+.post > table tr {
   height: 30px;
 }
-table th, table td {
+.post > table th, .post > table td {
   border: 2px solid white;
   padding-left: 11px;
   padding-right: 11px;
 }
-table th {
+.post > table th {
   color: white;
 }
