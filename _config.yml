@@ -1,6 +1,4 @@
-auto: true
-server: true
-server_port: 3000
+port: 3000
 paginate: 7
 markdown: kramdown
 exclude:
@@ -8,6 +6,7 @@ exclude:
   - icons
   - Rakefile
   - sass
+timezone: Europe/Rome
 
 base_url: http://baldowl.github.com
 title: Baldowl - my nest somewhere in GitHub's forest
