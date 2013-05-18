@@ -100,7 +100,7 @@ require 'net/http'
 desc "Ping Google after a sitemap update"
 task :ping do
   pinging_url = "http://www.google.com/webmasters/tools/ping?sitemap=" +
-    CGI.escape("http://baldowl.github.com/sitemap.xml")
+    CGI.escape("http://baldowl.github.io/sitemap.xml")
   google_response = Net::HTTP.get_response(URI.parse(pinging_url))
   case google_response
   when Net::HTTPOK

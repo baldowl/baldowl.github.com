@@ -8,7 +8,7 @@ exclude:
   - sass
 timezone: Europe/Rome
 
-base_url: http://baldowl.github.com
+site_address: http://baldowl.github.io
 title: Baldowl - my nest somewhere in GitHub's forest
 
 disqus_shortname: baldowl

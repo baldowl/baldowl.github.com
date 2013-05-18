@@ -5,8 +5,8 @@ tracking: utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=feed
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
   <id>{{ page.id_base }}:atom</id>
-  <link rel="alternate" href="{{ site.base_url }}?{{ page.tracking }}" type="text/html" />
-  <link rel="self" href="{{ site.base_url }}/atom.xml" type="application/atom+xml" />
+  <link rel="alternate" href="{{ site.site_address }}?{{ page.tracking }}" type="text/html" />
+  <link rel="self" href="{{ site.site_address }}/atom.xml" type="application/atom+xml" />
   <title>{{ site.title }}</title>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <author>
@@ -16,11 +16,11 @@ tracking: utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=feed
   <entry>
     <id>{{ page.id_base }}:{{ post.id }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
-    <link rel="alternate" href="{{ site.base_url }}{{ post.url }}?{{ page.tracking }}" type="text/html" />
+    <link rel="alternate" href="{{ site.site_address }}{{ post.url }}?{{ page.tracking }}" type="text/html" />
     <title>{{ post.title | xml_escape }}</title>
     <content type="html">
       &lt;p&gt;{{ post.content | strip_html | truncatewords: 50 | xml_escape }}&lt;/p&gt;
-      &lt;p&gt;&lt;a href=&quot;{{ site.base_url }}{{ post.url }}?{{ page.tracking }}&quot;&gt;More...&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;{{ site.site_address }}{{ post.url }}?{{ page.tracking }}&quot;&gt;More...&lt;/a&gt;&lt;/p&gt;
     </content>
   </entry>
   {% endfor %}

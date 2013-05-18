@@ -7,17 +7,17 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>{{ site.base_url }}</loc>
+    <loc>{{ site.site_address }}</loc>
     <lastmod>{{ site.time | date: "%F" }}</lastmod>
   </url>
 
   {% for post in site.posts %}<url>
-    <loc>{{ site.base_url }}{{ post.url }}</loc>
+    <loc>{{ site.site_address }}{{ post.url }}</loc>
     <lastmod>{{ post.date | date: "%F" }}</lastmod>
   </url>{% endfor %}
 
   {% for html_page in site.html_pages %}<url>
-    <loc>{{ site.base_url }}{{ html_page.url }}</loc>
+    <loc>{{ site.site_address }}{{ html_page.url }}</loc>
     <lastmod>{{ site.time | date: "%F" }}</lastmod>
   </url>{% endfor %}
 </urlset>
