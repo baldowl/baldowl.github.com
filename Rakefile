@@ -19,7 +19,7 @@ namespace :archives do
 
       year_list = File.read('_includes/year_list.html')
       published_years.each do |year|
-        puts "Missing year reference: #{year}" if year_list.grep(Regexp.new(year.to_s)).empty?
+        puts "Missing year reference: #{year}" if year_list.lines.grep(Regexp.new(year.to_s)).empty?
       end
     end
 
