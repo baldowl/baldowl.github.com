@@ -32,10 +32,8 @@ namespace :archives do
           File.open page, 'w' do |f|
             f.puts "---
 layout: default
-title: Archive of #{args.year} posts
 ---
-{% assign archive_year = '#{args.year}' %}
-{% include year.html %}"
+{% include year.html archived_year = '#{args.year}' %}"
           end
         else
           puts "#{args.year} archive already exists; nothing to do"
@@ -69,10 +67,8 @@ title: Archive of #{args.year} posts
           File.open page, 'w' do |f|
             f.puts "---
 layout: default
-title: Archive of \"#{args.tag}\" posts
 ---
-{% assign archive_tag = '#{args.tag}' %}
-{% include tag.html %}"
+{% include tag.html archived_tag = '#{args.tag}' %}"
           end
         else
           puts "#{args.tag} archive already exists; nothing to do"

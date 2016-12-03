@@ -1,11 +1,11 @@
 <header>
-  <h1>{{ page.title }}</h1>
+  <h1>Archive of {{ include.archived_year }} posts</h1>
 </header>
 
 <ul>
 {% for post in site.posts reversed %}
   {% assign post_year = post.date | date: '%Y' %}
-  {% if post_year == archive_year %}
+  {% if post_year == include.archived_year %}
     <li>
       <p><strong><time>{{ post.date | date: "%F" }}</time>:</strong>
       <a href="{{ post.url }}">{{ post.title }}</a></p>
