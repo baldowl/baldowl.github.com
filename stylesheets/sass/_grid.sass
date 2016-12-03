@@ -5,9 +5,8 @@
 $total-columns: 9
 $column-width: 80px
 $gutter-width: 10px
-$grid-padding: 0px
 
-$container-style: static
+$susy: (math: static, columns: $total-columns, column-width: $column-width, gutters: $gutter-width / $column-width)
 
 $sidebar-columns: 1
 $main-columns: $total-columns - $sidebar-columns
@@ -16,7 +15,7 @@ $main-columns: $total-columns - $sidebar-columns
   @include container
 
 #sidebar
-  @include span-columns($sidebar-columns omega, $total-columns)
+  @include span(last $sidebar-columns of $total-columns)
 
 #main
-  @include span-columns($main-columns, $total-columns)
+  @include span($main-columns of $total-columns)

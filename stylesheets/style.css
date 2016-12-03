@@ -50,32 +50,32 @@ a img {
   border: none;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 .icons-sprite, .clock-icon, .comment-icon, .tag-icon, .github-sidebar, .rss-sidebar, .shopify-sidebar {
-  background: url('/images/icons-s20ce9d2454.png') no-repeat;
+  background-image: url('/images/icons-se673def3cf.png');
+  background-repeat: no-repeat;
 }
 
 .clock-icon, .comment-icon, .tag-icon {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  zoom: 1;
+  *zoom: 1;
   *display: inline;
   padding: 2px;
 }
 
 .clock-icon {
-  background-position: 0 -108px;
+  background-position: 0 0;
   height: 12px;
   width: 12px;
 }
 
 .comment-icon {
-  background-position: 0 -124px;
+  background-position: 0 -16px;
   height: 11px;
   width: 12px;
 }
@@ -87,54 +87,50 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 .github-sidebar, .rss-sidebar, .shopify-sidebar {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  zoom: 1;
+  *zoom: 1;
   *display: inline;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
-  -webkit-transition: opacity 0.4s ease-in;
   -moz-transition: opacity 0.4s ease-in;
   -o-transition: opacity 0.4s ease-in;
+  -webkit-transition: opacity 0.4s ease-in;
   transition: opacity 0.4s ease-in;
   margin: 10px 0px;
 }
 .github-sidebar:hover, .rss-sidebar:hover, .shopify-sidebar:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 
 .github-sidebar {
-  background-position: 0 -36px;
+  background-position: 0 -31px;
   height: 32px;
   width: 32px;
 }
 
 .rss-sidebar {
-  background-position: 0 -72px;
+  background-position: 0 -67px;
   height: 32px;
   width: 32px;
 }
 
 .shopify-sidebar {
-  background-position: 0 0;
+  background-position: 0 -103px;
   height: 32px;
   width: 32px;
 }
 
 #header-content, #content, #footer-content {
-  *zoom: 1;
   width: 800px;
-  padding-left: 0px;
-  padding-right: 0px;
   margin-left: auto;
   margin-right: auto;
 }
 #header-content:after, #content:after, #footer-content:after {
-  content: "";
-  display: table;
+  content: " ";
+  display: block;
   clear: both;
 }
 
@@ -142,15 +138,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 80px;
   float: right;
   margin-right: 0;
-  *margin-left: -10px;
-  display: inline;
 }
 
 #main {
   width: 710px;
   float: left;
   margin-right: 10px;
-  display: inline;
 }
 
 #header-content {
@@ -162,13 +155,13 @@ h1#logo {
   position: absolute;
   font: bold 45px "Trebuchet MS", Tahoma, sans-serif;
   letter-spacing: -2px;
-  color: white;
+  color: #FFFFFF;
   margin: 0px;
   top: 0px;
   left: 0px;
 }
 h1#logo a {
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
@@ -176,7 +169,7 @@ h1#logo a {
   position: absolute;
   font: bold 12px "Trebuchet MS", Tahoma, sans-serif;
   text-transform: none;
-  color: white;
+  color: #FFFFFF;
   margin: 0px;
   top: 55px;
   left: 40px;
@@ -211,13 +204,13 @@ ul.sidemenu a {
   text-decoration: none;
 }
 ul.sidemenu a:hover {
-  color: #65944a;
+  color: #65944A;
 }
 
 #main h1 {
   padding: 10px 0px 0px 5px;
   margin: 0px 10px 0px 10px;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #F2F2F2;
   font: normal 1.5em "Trebuchet MS", Tahoma, sans-serif;
 }
 #main ul, #main ol {
@@ -233,17 +226,15 @@ ul.sidemenu a:hover {
 
 .post {
   background: white url('/images/gradientbg.jpg') repeat-x;
-  border: 1px solid #efeded;
-  -webkit-border-radius: 6px;
+  border: 1px solid #EFEDED;
   -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
+  -webkit-border-radius: 6px;
   border-radius: 6px;
   margin: 10px 0px;
 }
 .post footer {
-  background-color: #fafafa;
-  border: 1px solid #f2f2f2;
+  background-color: #FAFAFA;
+  border: 1px solid #F2F2F2;
   clear: both;
   padding: 5px;
   margin-top: 20px;
@@ -269,7 +260,7 @@ ul.sidemenu a:hover {
 }
 
 #footer-content {
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #EAEAEA;
   font: normal 0.95em/1.6em "Trebuchet MS", Tahoma, sans-serif;
   text-align: right;
 }
@@ -283,7 +274,7 @@ ul.sidemenu a:hover {
 body {
   font: normal 85%/1.5em "Trebuchet MS", Tahoma, sans-serif;
   color: #555555;
-  background: white url('/images/bg.jpg') repeat-x;
+  background: #FFFFFF url('/images/bg.jpg') repeat-x;
 }
 
 h1, h2, h3 {
@@ -292,7 +283,7 @@ h1, h2, h3 {
 
 h1 {
   font-size: 1.4em;
-  color: #65944a;
+  color: #65944A;
 }
 
 h2 {
@@ -310,9 +301,9 @@ p, h1, h2, h3 {
 
 a {
   text-decoration: none;
-  color: #72a545;
+  color: #72A545;
 }
-a:hover {
+a:hover, a:focus {
   text-decoration: underline;
 }
 a:hover {
@@ -320,9 +311,9 @@ a:hover {
 }
 
 img {
-  border: 1px solid #dadada;
+  border: 1px solid #DADADA;
   padding: 5px;
-  background: #fafafa;
+  background: #FAFAFA;
 }
 img.float-right {
   margin: 5px 0px 5px 15px;
@@ -337,13 +328,11 @@ img.centered {
 }
 
 tt, code {
-  background-color: #f2f2f2;
-  -webkit-border-radius: 3px;
+  background-color: #F2F2F2;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
-  color: black;
+  color: #000000;
   font-family: Monaco, monospace;
   font-size: 13px;
   padding: 1px 3px;
@@ -371,7 +360,7 @@ abbr {
 }
 
 .gray {
-  color: #bfbfbf;
+  color: #BFBFBF;
 }
 
 .post > table {
@@ -379,7 +368,7 @@ abbr {
   margin: 10px 15px;
 }
 .post > table th {
-  background-color: #65944a;
+  background-color: #65944A;
 }
 .post > table th.even, .post > table th:nth-child(2n) {
   background-color: #58873d;
@@ -391,7 +380,7 @@ abbr {
   background-color: #e5e5e5;
 }
 .post > table tr.even td {
-  background-color: white;
+  background-color: #FFFFFF;
 }
 .post > table tr.even td.even, .post > table tr.even td:nth-child(2n) {
   background-color: #f2f2f2;
@@ -410,10 +399,10 @@ abbr {
   height: 30px;
 }
 .post > table th, .post > table td {
-  border: 2px solid white;
+  border: 2px solid #FFFFFF;
   padding-left: 11px;
   padding-right: 11px;
 }
 .post > table th {
-  color: white;
+  color: #FFFFFF;
 }
