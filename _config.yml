@@ -2,10 +2,11 @@ port: 3000
 paginate: 7
 markdown: kramdown
 exclude:
-  - config.rb
-  - icons
+  - Gemfile*
   - Rakefile
-  - sass
+  - config.rb
+  - images/icons/
+  - stylesheets/sass/
 timezone: Europe/Rome
 gems:
   - jekyll-gist
