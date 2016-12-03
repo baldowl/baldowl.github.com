@@ -7,6 +7,9 @@ exclude:
   - Rakefile
   - sass
 timezone: Europe/Rome
+gems:
+  - jekyll-gist
+  - jekyll-paginate
 
 site_address: http://baldowl.github.io
 title: Baldowl - my nest somewhere in GitHub's forest

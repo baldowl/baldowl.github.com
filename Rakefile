@@ -8,7 +8,7 @@ namespace :archives do
     desc "Check year archives' consistency"
     task :check do
       puts "Checking year archives..."
-      published_years = gathered_data.posts.map {|p| p.date.year}.uniq.sort
+      published_years = gathered_data.posts.docs.map {|p| p.date.year}.uniq.sort
       archived_years = Dir.glob('archives/years/*').map {|f| File.basename(f).to_i}
 
       ghost_archives = archived_years - published_years
@@ -50,7 +50,7 @@ title: Archive of #{args.year} posts
     desc "Check tag archives' consistency"
     task :check do
       puts "Checking tag archives..."
-      published_tags = gathered_data.posts.map {|p| p.tags}.flatten.uniq.sort
+      published_tags = gathered_data.posts.docs.map {|p| p.data['tags']}.flatten.uniq.sort
       archived_tags = Dir.glob('archives/tags/*').map {|f| File.basename(f)}
 
       ghost_archives = archived_tags - published_tags
@@ -89,7 +89,7 @@ def gathered_data
   $stdout.reopen('/dev/null')
   $stdout.sync = true
   @site ||= Jekyll::Site.new(Jekyll.configuration({}))
-  @site.read_directories
+  @site.process
   $stdout.reopen old_stdout
   @site
 end
