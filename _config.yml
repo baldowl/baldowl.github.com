@@ -8,7 +8,7 @@ exclude:
   - images/icons/
   - stylesheets/sass/
 timezone: Europe/Rome
-gems:
+plugins:
   - jekyll-gist
   - jekyll-paginate
 
