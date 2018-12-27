@@ -1,3 +1,4 @@
+require 'font-awesome-sass'
 require 'susy'
 
 http_path = '/'

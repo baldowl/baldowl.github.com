@@ -59,6 +59,14 @@ ul.sidemenu
   a
     @include link-colors($sidebar_link_color, $sidebar_link_hover_color)
     text-decoration: none
+  i.fas, i.fab
+    @include opacity(0.6)
+    @include single-transition(opacity, 0.4s, ease-in)
+    color: $text_color
+    margin: 10px 0px
+    &:hover
+      @include opaque
+      color: $text_color
 
 // main
 
@@ -72,7 +80,16 @@ ul.sidemenu
     margin: 10px 30px
     padding: 0px 15px
   ul
-    list-style-image: image-url('bullet.gif')
+    li
+      &:before
+        @extend .far
+        @extend .fa-dot-circle
+        color: $list_item_color
+        line-height: inherit
+        margin-left: -$fa-li-width
+        position: absolute
+        text-align: center
+        width: $fa-li-width
   ol
     list-style-type: decimal
 
@@ -93,6 +110,8 @@ ul.sidemenu
       .blob
         padding-left: 20px
         margin: 0px 10px 0px 5px
+        i.fa
+          padding: 6px
 
 #disqus_thread
   ul

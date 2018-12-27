@@ -7,9 +7,9 @@
 
   <footer>
     <p>
-      {% if post.tags != empty %}{% assign sorted_tags = post.tags | sort %}<span class="blob"><i class="tag-icon"></i>{% for tag in sorted_tags %}<a href="/archives/tags/{{ tag | xml_escape }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif %}
-      {% if include.single_post != true and post.comments != false and site.show_drafts != true %}<span class="blob"><i class="comment-icon"></i><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}"></a></span>{% endif %}
-      <time datetime="{{ post.date | date: '%F' }}" pubdate><span class="blob"><i class="clock-icon"></i>{{ post.date | date: '%b %d, %Y' }}</span></time>
+      {% if post.tags != empty %}{% assign sorted_tags = post.tags | sort %}<span class="blob"><i class="fas fa-tags"></i> {% for tag in sorted_tags %}<a href="/archives/tags/{{ tag | xml_escape }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif %}
+      {% if include.single_post != true and post.comments != false and site.show_drafts != true %}<span class="blob"><i class="far fa-comments"></i> <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}"></a></span>{% endif %}
+      <time datetime="{{ post.date | date: '%F' }}" pubdate><span class="blob"><i class="fas fa-calendar-alt"></i> {{ post.date | date: '%b %d, %Y' }}</span></time>
     </p>
   </footer>
 
