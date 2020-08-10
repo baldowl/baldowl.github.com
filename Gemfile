@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'github-pages', '= 198'
+gem 'github-pages', '= 207'
 gem 'susy', '~> 2.2.12'
 gem 'compass', '~> 1.0.3'
-gem 'rake', '~> 12.3.3'
-gem 'font-awesome-sass', '= 5.6.1'
+gem 'rake', '~> 13.0.1'
+gem 'font-awesome-sass', '= 5.13.0'
