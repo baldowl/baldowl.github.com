@@ -1,0 +1,146 @@
+// Layout
+
+// header
+
+#header-content
+  height: 100px
+  position: relative
+
+h1#logo
+  position: absolute
+  font: bold 45px $main_font_list
+  letter-spacing: -2px
+  color: $logo_color
+  margin: 0px
+  // change the values of left and top to adjust the position of the logo
+  top: 0px
+  left: 0px
+  a
+    color: $logo_color
+    text-decoration: none
+
+#slogan
+  position: absolute
+  font: bold 12px $main_font_list
+  text-transform: none
+  color: $slogan_color
+  margin: 0px
+  // change the values of left and top to adjust the position of the slogan
+  top: 55px
+  left: 40px
+
+// header photo
+
+#headerphoto
+  margin-left: auto
+  margin-right: auto
+  width: container()
+  height: 200px
+  padding: 15px 15px 10px 15px
+  background: white url('/images/headerphoto.jpg') no-repeat center
+
+// sidebar
+
+#sidebar
+  margin-top: 10px
+  margin-bottom: 10px
+
+.sidebox
+  margin-bottom: 10px
+  text-align: center
+  h1
+    padding: 10px 0px 5px 0px
+    margin: 0px
+    font: bold 1.3em $main_font_list
+
+// sidebar menu
+
+ul.sidemenu
+  a
+    color: $sidebar_link_color
+    text-decoration: none
+    &:hover
+      color: $sidebar_link_hover_color
+  i.fas, i.fab
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60)
+    opacity: 0.6
+    -moz-transition: opacity 0.4s ease-in
+    -o-transition: opacity 0.4s ease-in
+    -webkit-transition: opacity 0.4s ease-in
+    transition: opacity 0.4s ease-in
+    color: $text_color
+    margin: 10px 0px
+    &:hover
+      filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false)
+      opacity: 1
+      color: $text_color
+
+// main
+
+#main
+  h1
+    padding: 10px 0px 0px 5px
+    margin: 0px 10px 0px 10px
+    border-bottom: 1px solid $header_border_color
+    font: normal 1.5em $main_font_list
+  ul, ol
+    margin: 10px 30px
+    padding: 0px 15px
+  ul
+    li
+      &:before
+        @extend .far
+        @extend .fa-dot-circle
+        color: $list_item_color
+        line-height: inherit
+        margin-left: -$fa-li-width
+        position: absolute
+        text-align: center
+        width: $fa-li-width
+  ol
+    list-style-type: decimal
+
+.post
+  background: white image-url('gradientbg.jpg') repeat-x
+  border: 1px solid $post_border_color
+  -moz-border-radius: 6px
+  -webkit-border-radius: 6px
+  border-radius: 6px
+  margin: 10px 0px
+  footer
+    background-color: $post_footer_background_color
+    border: 1px solid $post_footer_border_color
+    clear: both
+    padding: 5px
+    margin-top: 20px
+    text-align: right
+    p
+      margin: 0px
+      .blob
+        padding-left: 20px
+        margin: 0px 10px 0px 5px
+        i.fa
+          padding: 6px
+
+#disqus_thread
+  ul
+    list-style: none
+
+// navigation
+
+.page-navigation
+  .newer
+    float: left
+  .older
+    float: right
+
+// footer
+
+#footer-content
+  border-top: 1px solid $footer_border_color
+  font: normal 0.95em / 1.6em $main_font_list
+  text-align: right
+  a
+    color: $footer_link_color
+    &:hover
+      color: $footer_link_hover_color

@@ -4,13 +4,15 @@ markdown: kramdown
 exclude:
   - Gemfile*
   - Rakefile
-  - config.rb
-  - images/icons/
-  - stylesheets/sass/
 timezone: Europe/Rome
 plugins:
   - jekyll-gist
   - jekyll-paginate
+sass:
+  load_paths:
+    - _sass
+    - vendor/bundle/ruby/3.1.0/gems
+  sourcemap: never
 
 site_address: http://baldowl.github.io
 title: Baldowl - my nest somewhere in GitHub's forest
