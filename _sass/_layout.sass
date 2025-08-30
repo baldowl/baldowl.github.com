@@ -1,6 +1,7 @@
 // Layout
 
 @use "fonts" as *
+@use "font-awesome/fa" as fa
 @use "colors" as *
 @use "grid" as *
 
@@ -97,10 +98,10 @@ ul.sidemenu
         @extend .fa-dot-circle
         color: $list_item_color
         line-height: inherit
-        margin-left: -$fa-li-width
+        margin-left: -(fa.$li-width)
         position: absolute
         text-align: center
-        width: $fa-li-width
+        width: fa.$li-width
   ol
     list-style-type: decimal
 

@@ -5,8 +5,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    ignore:
-      - dependency-name: "font-awesome-sass"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
