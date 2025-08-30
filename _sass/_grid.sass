@@ -1,21 +1,20 @@
 // Grid
 
-@import susy/susy
-
-$total-columns: 9
-$column-width: 80px
-$gutter-width: 10px
-
-$susy: (math: static, columns: $total-columns, column-width: $column-width, gutters: calc($gutter-width / $column-width))
-
-$sidebar-columns: 1
-$main-columns: $total-columns - $sidebar-columns
-
 #header-content, #content, #footer-content
-  @include container
+  width: 800px
+  margin-left: auto
+  margin-right: auto
+  &:after
+    content: " "
+    display: block
+    clear: both
 
 #sidebar
-  @include span(last $sidebar-columns of $total-columns)
+  width: 80px
+  float: right
+  margin-right: 0
 
 #main
-  @include span($main-columns of $total-columns)
+  width: 710px
+  float: left
+  margin-right: 10px
