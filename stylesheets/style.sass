@@ -109,23 +109,23 @@ abbr
   th
     background-color: $table_header_background_color
     &.even, &:nth-child(2n)
-      background-color: color.adjust($table_header_background_color, $red: -(color.channel(color.adjust(white, $lightness: -95%), "red")), $green: -(color.channel(color.adjust(white, $lightness: -95%), "green")), $blue: -(color.channel(color.adjust(white, $lightness: -95%), "blue")))
+      background-color: color.adjust($table_header_background_color, $lightness: -5%)
   tr
     &.odd, &:nth-child(2n+1)
       td
         background-color: color.adjust($background_color, $lightness: -5%)
         &.even, &:nth-child(2n)
-          background-color: color.adjust(color.adjust($background_color, $lightness: -5%), $red: -(color.channel(color.adjust(white, $lightness: -95%), "red")), $green: -(color.channel(color.adjust(white, $lightness: -95%), "green")), $blue: -(color.channel(color.adjust(white, $lightness: -95%), "blue")))
+          background-color: color.adjust($background_color, $lightness: -10%)
     &.even
       td
         background-color: $background_color
         &.even, &:nth-child(2n)
-          background-color: color.adjust($background_color, $red: -(color.channel(color.adjust(white, $lightness: -95%), "red")), $green: -(color.channel(color.adjust(white, $lightness: -95%), "green")), $blue: -(color.channel(color.adjust(white, $lightness: -95%), "blue")))
+          background-color: color.adjust($background_color, $lightness: -5%)
   tfoot
     th, td
       background-color: white
       &.even, &:nth-child(2n)
-        background-color: color.adjust(white, $red: -(color.channel(color.adjust(white, $lightness: -95%), "red")), $green: -(color.channel(color.adjust(white, $lightness: -95%), "green")), $blue: -(color.channel(color.adjust(white, $lightness: -95%), "blue")))
+        background-color: color.adjust(white, $lightness: -5%)
   &.centered
     margin-left: auto
     margin-right: auto
