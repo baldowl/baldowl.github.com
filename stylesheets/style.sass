@@ -9,11 +9,13 @@
 // VERSION:       1.2
 // LAST MODIFIED: June-05-2007
 
-@import reset
-@import colors
-@import fonts
-@import grid
-@import layout
+@use "sass:color"
+
+@use "reset"
+@use "colors" as *
+@use "fonts" as *
+@use "grid"
+@use "layout"
 
 // top elements
 
@@ -107,23 +109,23 @@ abbr
   th
     background-color: $table_header_background_color
     &.even, &:nth-child(2n)
-      background-color: adjust_color($table_header_background_color, $red: -(red(darken(white, 95%))), $green: -(green(darken(white, 95%))), $blue: -(blue(darken(white, 95%))))
+      background-color: color.adjust($table_header_background_color, $red: -(color.channel(color.adjust(white, $lightness: -95%), "red")), $green: -(color.channel(color.adjust(white, $lightness: -95%), "green")), $blue: -(color.channel(color.adjust(white, $lightness: -95%), "blue")))
   tr
     &.odd, &:nth-child(2n+1)
       td
-        background-color: darken($background_color, 5%)
+        background-color: color.adjust($background_color, $lightness: -5%)
         &.even, &:nth-child(2n)
-          background-color: adjust_color(darken($background_color, 5%), $red: -(red(darken(white, 95%))), $green: -(green(darken(white, 95%))), $blue: -(blue(darken(white, 95%))))
+          background-color: color.adjust(color.adjust($background_color, $lightness: -5%), $red: -(color.channel(color.adjust(white, $lightness: -95%), "red")), $green: -(color.channel(color.adjust(white, $lightness: -95%), "green")), $blue: -(color.channel(color.adjust(white, $lightness: -95%), "blue")))
     &.even
       td
         background-color: $background_color
         &.even, &:nth-child(2n)
-          background-color: adjust_color($background_color, $red: -(red(darken(white, 95%))), $green: -(green(darken(white, 95%))), $blue: -(blue(darken(white, 95%))))
+          background-color: color.adjust($background_color, $red: -(color.channel(color.adjust(white, $lightness: -95%), "red")), $green: -(color.channel(color.adjust(white, $lightness: -95%), "green")), $blue: -(color.channel(color.adjust(white, $lightness: -95%), "blue")))
   tfoot
     th, td
       background-color: white
       &.even, &:nth-child(2n)
-        background-color: adjust_color(white, $red: -(red(darken(white, 95%))), $green: -(green(darken(white, 95%))), $blue: -(blue(darken(white, 95%))))
+        background-color: color.adjust(white, $red: -(color.channel(color.adjust(white, $lightness: -95%), "red")), $green: -(color.channel(color.adjust(white, $lightness: -95%), "green")), $blue: -(color.channel(color.adjust(white, $lightness: -95%), "blue")))
   &.centered
     margin-left: auto
     margin-right: auto
