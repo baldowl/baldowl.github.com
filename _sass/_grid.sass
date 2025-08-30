@@ -1,7 +1,13 @@
 // Grid
 
+$total-columns: 9
+$column-width: 80px
+$gutter-width: 10px
+
+$content-width: $total-columns * $column-width + ($total-columns - 1) * $gutter-width
+
 #header-content, #content, #footer-content
-  width: 800px
+  width: $content-width
   margin-left: auto
   margin-right: auto
   &:after
@@ -10,11 +16,11 @@
     clear: both
 
 #sidebar
-  width: 80px
+  width: $column-width
   float: right
   margin-right: 0
 
 #main
-  width: 710px
+  width: $total-columns * $column-width - $gutter-width
   float: left
-  margin-right: 10px
+  margin-right: $gutter-width
